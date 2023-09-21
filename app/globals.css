@@ -1,3 +1,67 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Start re-enter of CSS Styling from 9/12*/
+
+
+/* create background colors red and purple*/
+.bg-red {
+    --tw-bg-opacity: 1;
+    background-color: rgb(210 34 42 / var(--tw-bg-opacity));
+  }
+.bg-purple {
+    --tw-bg-opacity: 1;
+    background-color: rgb(70 45 145 / var(--tw-bg-opacity));
+  }
+/*create text-red for hover*/
+.text-red {
+    --tw-text-opacity: 1;
+    color: rgb(210 34 42 / var(--tw-text-opacity));
+  }
+/* create hover red border*/
+@media (hover: hover) and (pointer: fine) {
+
+    .hover\:text-red:hover {
+        --tw-text-opacity: 1;
+        color: rgb(210 34 42 / var(--tw-text-opacity));
+        border-color: rgb(210 34 42 / var(--tw-text-opacity));
+      }
+}
+/*create extra small text xsm*/
+.text-xsm {
+    font-size: 0.5rem;
+    line-height: 1;
+  }
+
+/*change spacing on EULA create new y-5 spacing*/
+.space-y-5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.2rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.2rem * var(--tw-space-y-reverse));
+}
+/* change ordered list settings style class for EULA*/
+ol.normal  {
+  list-style-type: decimal;
+}
+ol.nested  {
+  list-style-type: lower-alpha;
+  margin-left: 20px;
+}
+/* change the bottom padding from py-20 in layout.tsx */
+.py-22 {
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+}
+.py-24 {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+.overflow-y {
+  max-height: 320px;
+  overflow-y: auto;
+}
+.text-norm {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}

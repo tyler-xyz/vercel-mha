@@ -6,7 +6,7 @@ const styles = {
 export default function Footer() {
   return (
     <div className="absolute w-full border-t border-gray-200 bg-opacity-100 bg-purple py-5 text-center">
-      <p className="text-white">
+      <p className="font-low text-white">
         Need Additional Help?{" "}
         <a
           className="font-low text-white underline transition-colors inline-flex"

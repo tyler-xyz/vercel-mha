@@ -39,7 +39,7 @@ export default async function Home() {
             // target="_self"
             // rel="noopener noreferrer"
           >
-            <p>Let&aposs Chat</p>
+            <p>Let&apos;s Chat</p>
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
               fill="none" 

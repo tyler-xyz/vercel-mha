@@ -45,7 +45,8 @@ export default function Chat() {
 {/* end chatbubbles */}
 {/* text input temporary */}
 <input type="text" placeholder="Type your message here" className="input input-bordered w-full max-w-xl" />
-
+{/* temporary send/end btns */}
+<button className="btn btn-outline btn-primary btn-sm">End Chat</button>
 </div>
     </>
   );

@@ -5,6 +5,8 @@ import Link from "next/link";
 import { ReCaptchaProvider } from "next-recaptcha-v3";
 import EulaButton from "@/components/home/terms-button";
 import NavWarning from "@/components/home/nav-warning";
+import { Box } from "@twilio-paste/box";
+import { InfoIcon } from "lucide-react";
 
 export default async function Home() {
   return (
@@ -69,7 +71,27 @@ export default async function Home() {
       </div>
 
        {/* navigation warning  */}
-        <NavWarning />
+       <Box
+            as="article"
+            backgroundColor="colorBackgroundBody"
+            padding="space60"
+            >
+                Please note
+        <Box
+            backgroundColor="colorBackgroundSuccessWeakest"
+             display="inline-block"
+             padding="space40"
+            >
+                <InfoIcon />
+            <p
+             className="mt-6 animate-fade-up text-center text-gray-500 opacity-0 md:text-norm"
+             style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
+             >
+                While you chat with us you must remain on the website. If you navigate away from the chat window your connection may be lost.
+            </p>
+        </Box>
+        </Box>
+        {/* <NavWarning /> */}
         {/* <p
           className="mt-6 animate-fade-up text-center text-gray-500 opacity-0 md:text-norm"
           style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}

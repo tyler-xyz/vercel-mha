@@ -3,6 +3,7 @@ import { nFormatter } from "@/lib/utils";
 import React from "react";
 import { Conversation } from "@twilio/conversations";
 import { Box } from "@twilio-paste/box";
+import Balancer from "react-wrap-balancer";
 
 /* this is the index page for the Chat Page */
 
@@ -11,7 +12,7 @@ export default function Chat() {
     <>
 {/* box container for chatWindow demo */}
 <div className="z-10 w-full max-w-xl px-5 xl:px-0">
-
+<Balancer>
 {/* temporary chatbubbles */}
 <div className="chat chat-end">
     <div className="chat-bubble bg-base-200">Emergency Auto-Prompt1</div>
@@ -31,6 +32,7 @@ export default function Chat() {
     Delivered
   </div>
 </div>
+</Balancer>
 </div>
     </>
   );

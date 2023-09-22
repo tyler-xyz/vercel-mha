@@ -44,7 +44,7 @@ EULA, then Licensee may not download, install, or use the Software.
   <li><b>Grant of License.</b> </li>
   <ol className="nested">
         <li><b>Scope of License.</b> Subject to the terms of this EULA, Licensor hereby grants to Licensee a royalty-free, non-exclusive license to possess and to use a copy of the Software.</li>
-        <li><b>Installation and Use.</b> Licensee may install and use a maximum of nineteen (19) copies of the Software solely for Licensee's business use.</li>
+        <li><b>Installation and Use.</b> Licensee may install and use a maximum of nineteen (19) copies of the Software solely for Licensee&aposs business use.</li>
     </ol>
   <li><b>Description of Rights and Limitations.</b> </li>
   <ol className="nested">

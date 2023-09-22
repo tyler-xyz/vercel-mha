@@ -25,7 +25,7 @@ export default function Chat() {
     </div>
     </div>
     <div className="chat chat-end">
-    <div className="chat-bubble bg-base-200">No</div>
+    <div className="chat-bubble chat-bubble-info bg-base-200">No</div>
     <div className="chat-footer opacity-50">
       Seen
   </div>

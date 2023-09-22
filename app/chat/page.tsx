@@ -6,7 +6,7 @@ import { Box } from "@twilio-paste/box";
 
 /* this is the index page for the Chat Page */
 
-export default async function Chat() {
+export default function Chat() {
   return (
     <>
       <div className="my-10 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 md:grid-cols-1 xl:px-0">

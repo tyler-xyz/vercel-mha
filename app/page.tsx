@@ -6,13 +6,13 @@ import { ReCaptchaProvider } from "next-recaptcha-v3";
 import EulaButton from "@/components/home/terms-button";
 import NavWarning from "@/components/home/nav-warning";
 import { Box } from "@twilio-paste/box";
-import { InfoIcon } from "lucide-react";
 
 export default async function Home() {
   return (
     <>
     {/* adding recaptcha */}
     <ReCaptchaProvider reCaptchaKey="6Lc2qS4oAAAAACIcdUjUVeeviZGRFaLVvN_aIUL1">
+      
     {/* begin orig code */}
       <div className="z-10 w-full max-w-xl px-5 xl:px-0">
         <h3
@@ -82,7 +82,7 @@ export default async function Home() {
              display="inline-block"
              padding="space40"
             >
-                <InfoIcon />
+                {/* <InfoIcon /> */}
             <p
              className="mt-6 animate-fade-up text-center text-gray-500 opacity-0 md:text-norm"
              style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}

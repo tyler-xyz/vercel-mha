@@ -46,11 +46,11 @@ export default function Chat() {
 {/* text input temporary */}
 <input type="text" placeholder="Type your message here" className="input input-bordered w-full max-w-xl" />
 {/* temporary send/end btns */}
+<div className="mt-6 inline-flex">
 <button className="btn btn-outline btn-primary btn-sm">
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-4 h-4">
   <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
 </svg>
-
   End Chat</button>
 
 <button className="btn btn-outline btn-error btn-sm">Send
@@ -58,6 +58,7 @@ export default function Chat() {
   <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
 </svg>
 </button>
+</div>
 </div>
     </>
   );

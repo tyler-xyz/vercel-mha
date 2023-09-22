@@ -2,9 +2,7 @@ import Image from "next/image";
 import { nFormatter } from "@/lib/utils";
 import React from "react";
 import { Conversation } from "@twilio/conversations";
-import { Box } from "framer-motion";
-
-
+import { Box } from "@twilio-paste/box";
 /* this is the index page for the Chat Page */
 
 export default function Chat() {

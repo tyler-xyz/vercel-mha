@@ -29,7 +29,8 @@ export default function Chat() {
     Delivered
   </div>
 </div>
-
+{/* text input temporary */}
+<input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
     </div>
     </>
   );

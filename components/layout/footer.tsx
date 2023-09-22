@@ -20,7 +20,7 @@ export default function Footer() {
             fill="none" 
             viewBox="0 0 24 24" 
             stroke-width="1.5" 
-            stroke="currentColor" className="w-4 h-4">
+            stroke="currentColor" className="w-4 h-4 inline-flex">
           <path 
             stroke-linecap="round" 
             stroke-linejoin="round" 

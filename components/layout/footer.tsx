@@ -5,22 +5,22 @@ const styles = {
 };
 export default function Footer() {
   return (
-    <div className="absolute w-full border-t border-gray-200 bg-opacity-100 bg-purple py-5 text-center">
+    <div className="absolute w-full border-t border-gray-200 bg-opacity-100 bg-purple py-5 text-center inline-flex">
       <p className="text-white">
         Need Additional Help?{" "}
         <a
-          className="font-medium text-white underline transition-colors inline-flex"
+          className="font-low text-white underline transition-colors inline-flex"
           href="https://justtellone.org/about/"
           target="_self"
           rel="noopener noreferrer"
         >
-          Read more on our website 
+          Find more on our website 
           <svg 
             xmlns="http://www.w3.org/2000/svg" 
             fill="none" 
             viewBox="0 0 24 24" 
             stroke-width="1.5" 
-            stroke="currentColor" className="w-4 h-4 inline-flex">
+            stroke="currentColor" className="w-4 h-4">
           <path 
             stroke-linecap="round" 
             stroke-linejoin="round" 

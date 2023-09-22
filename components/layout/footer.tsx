@@ -9,7 +9,7 @@ export default function Footer() {
       <p className="text-white">
         Need Additional Help?{" "}
         <a
-          className="font-low text-white underline transition-colors inline-flex"
+          className="font-medium text-white underline transition-colors inline-flex"
           href="https://justtellone.org/about/"
           target="_self"
           rel="noopener noreferrer"

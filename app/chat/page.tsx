@@ -48,7 +48,7 @@ export default function Chat() {
 <input type="text" placeholder="Type your message here" className="input input-bordered w-full max-w-xl" />
 
 {/* temporary send/end btns */}
-<div className="mt-3 inline-flex">
+<div className="mt-3 flex justify-between">
 
 <button className="btn btn-outline btn-primary btn-sm object-left">
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-4 h-4">

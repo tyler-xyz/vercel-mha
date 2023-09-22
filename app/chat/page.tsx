@@ -11,6 +11,11 @@ export default function Chat() {
     <>
 {/* box container for chatWindow demo */}
 <div className="z-10 w-full max-w-xl px-5 xl:px-0">
+{/* temporary nav warning */}
+<div className="alert alert-info bg-indigo-500/50">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="stroke-current shrink-0 w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+  <p className="md:text-xsm">Please note. If you navigate away from the chat window your connection may be lost.</p>
+</div>
 
 {/* temporary chatbubbles */}
 <div className="chat chat-end">
@@ -20,13 +25,13 @@ export default function Chat() {
 </div>
 </div>
     <div className="chat chat-start">
-    <div className="chat-bubble">You were the Chosen One!</div>
+    <div className="chat-bubble">No</div>
     <div className="chat-footer opacity-50">
       Seen
   </div>
 </div>
 <div className="chat chat-start">
-  <div className="chat-bubble">I loved you.</div>
+  <div className="chat-bubble">14228</div>
   <div className="chat-footer opacity-50">
     Delivered
   </div>

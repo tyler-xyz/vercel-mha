@@ -11,7 +11,26 @@ export default function Chat() {
     <>
 {/* box container for chatWindow demo */}
 <div className="z-10 w-full max-w-xl px-5 xl:px-0">
-  
+
+{/* temporary chatbubbles */}
+<div className="chat chat-end">
+    <div className="chat-bubble bg-base-200">Emergency Auto-Prompt1</div>
+    <div className="chat-footer opacity-50">
+      2:46pm
+</div>
+</div>
+    <div className="chat chat-start">
+    <div className="chat-bubble">You were the Chosen One!</div>
+    <div className="chat-footer opacity-50">
+      Seen
+  </div>
+</div>
+<div className="chat chat-start">
+  <div className="chat-bubble">I loved you.</div>
+  <div className="chat-footer opacity-50">
+    Delivered
+  </div>
+</div>
 </div>
     </>
   );

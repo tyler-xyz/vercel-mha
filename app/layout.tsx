@@ -9,7 +9,7 @@ import { Suspense } from "react";
 export const metadata = {
   title: "Chat with a Youth Peer Advocate",
   description:
-    "Anonymous Chat with a Your Peer Advocated provided by JustTellOne.org",
+    "Anonymous Chat with a Youth Peer Advocated provided by JustTellOne.org",
   metadataBase: new URL("https://justtellone.org"),
   themeColor: "#FFF",
 };

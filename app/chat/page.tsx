@@ -19,7 +19,7 @@ export default function Chat() {
 
 {/* temporary chatbubbles */}
 <div className="chat chat-start">
-    <div className="chat-bubble">Emergency Auto-Prompt1</div>
+    <div className="chat-bubble">Are you, or someone you know having an emergency crisis?</div>
     <div className="chat-footer opacity-50">
       2:46pm
 </div>
@@ -29,11 +29,17 @@ export default function Chat() {
     <div className="chat-footer opacity-50">
       Seen
   </div>
+<div className="chat chat-start">
+    <div className="chat-bubble">What is your 5-digit Zip code?</div>
+    <div className="chat-footer opacity-50">
+      2:47pm
+</div>
 </div>
 <div className="chat chat-end">
-  <div className="chat-bubble">14228</div>
+  <div className="chat-bubble bg-base-200">14228</div>
   <div className="chat-footer opacity-50">
     Delivered
+  </div>
   </div>
 </div>
 {/* end chatbubbles */}

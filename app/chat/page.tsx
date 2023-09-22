@@ -10,7 +10,7 @@ export default function Chat() {
   return (
     <>
 {/* box container for chatWindow demo */}
-<div className="z-10 w-full max-w-xl px-5 xl:px-0 box-border h-full p-2 border-2">
+<div className="z-10 w-full max-w-xl px-5 xl:px-2 box-border h-screen p-2 border-2">
 {/* temporary nav warning */}
 <div className="alert alert-info bg-indigo-500/50">
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="stroke-current shrink-0 w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>

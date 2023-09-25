@@ -68,3 +68,9 @@ ol.nested  {
 .font-low {
   font-weight: 250;
 }
+.mt-0 {
+  margin-top: 0.0em;
+}
+.mb-6 {
+  margin-bottom: 1.5em;
+}

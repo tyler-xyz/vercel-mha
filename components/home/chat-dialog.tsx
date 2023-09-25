@@ -8,6 +8,7 @@ import { ClearEditorPlugin } from "@twilio-paste/lexical-library";
 import { $getRoot, EditorState, RootNode } from "lexical";
 import useScroll from '@/lib/hooks/use-scroll';
 import { LexicalEditor } from '@twilio-paste/lexical-library';
+import NavWarning from './nav-warning';
 
 const ChatDialog = () => {
   const {chats, push} = useChatLogger(
@@ -20,6 +21,13 @@ const ChatDialog = () => {
           </ChatBookendItem>
         </ChatBookend>
       ),
+    },
+    //insert nav warning comp
+    {
+      variant: 'inbound',
+      content: (
+        <NavWarning />
+      )
     },
     //first inbound msg
     {

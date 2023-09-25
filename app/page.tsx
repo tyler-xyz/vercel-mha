@@ -72,19 +72,12 @@ export default async function Home() {
 
        {/* navigation warning  */}
 
-        {/* <NavWarning /> */}
-        {/* <p
-          className="mt-6 animate-fade-up text-center text-gray-500 opacity-0 md:text-norm"
-          style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
-        >
-          <Balancer>
-          Please note that while you chat with us you must remain on the website. If you navigate away from the chat window your connection may be lost.
-          </Balancer>
-        </p>  */}
-        <div className="alert alert-info bg-indigo-500/50 mx-auto mt-6 flex animate-fade-up items-center justify-center space-x-5 ">
+        <NavWarning />
+          {/* basecode for navwarning */}
+        {/* <div className="alert alert-info bg-indigo-500/50 mx-auto mt-6 flex animate-fade-up items-center justify-center space-x-5 ">
            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="stroke-current shrink-0 w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
             <p className="md:text-xsm">Please note that while you chat with us you must remain on the app. If you navigate away from the chat window your connection may be lost.</p>
-        </div>
+        </div>  */}
       </div>
       </ReCaptchaProvider>
     </>

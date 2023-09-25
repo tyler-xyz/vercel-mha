@@ -7,6 +7,7 @@ import { EnterKeySubmitPlugin } from './send-on-enter';
 import { ClearEditorPlugin } from "@twilio-paste/lexical-library";
 import { $getRoot, EditorState, RootNode } from "lexical";
 import useScroll from '@/lib/hooks/use-scroll';
+import { LexicalEditor } from '@twilio-paste/lexical-library';
 
 const ChatDialog = () => {
   const {chats, push} = useChatLogger(
@@ -69,7 +70,7 @@ React.useEffect(() => {
 [chats, mounted]);
 
 //composer change of state
-const handleComposerChange = (editorState: EditorState) => {
+const handleComposerChange = (editorState: { read: (arg0: () => void) => void; }) => {
   editorState.read(() => {
     const text = $getRoot().getTextContent();
   });
@@ -83,7 +84,7 @@ const submitMessage = () => {
 // return
   return (
     <Box>
-      <Box ref={scrollerRef} overflowX="hidden" overflowY="scroll" maxHeight="size50" tabIndex={0}>
+      <Box ref={scrollerRef} overflowX="hidden" overflowY="scroll" maxHeight="size60" tabIndex={0}>
       <ChatLogger ref={loggerRef} chats={chats} />
       </Box>
       <Box
@@ -111,8 +112,6 @@ const submitMessage = () => {
         >
           <ClearEditorPlugin />
           <SendButtonPlugin onClick={submitMessage} />
-    {/* NEED TO FIX ON ENTER KEY SUBMIT MESSAGE */}
-          <EnterKeySubmitPlugin onClick={submitMessage} />
         </ChatComposer>
       </Box>
     </Box>

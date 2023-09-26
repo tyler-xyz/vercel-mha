@@ -14,7 +14,7 @@ export default function ComponentGrid() {
       <span >By continuing, you accept our{""}</span>
       <a
         onClick={() => setShowDemoModal(true)}
-        className="underline inline flex"
+        className="underline inline-flex"
       >
         {/* Terms 
         <svg 

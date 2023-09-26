@@ -51,9 +51,11 @@ const ChatDialog = () => {
           <ChatBubble>
             INSERT RESPONSE HERE
           </ChatBubble>
-            <ChatMessageMetaItem>
-              2:47 PM
-            </ChatMessageMetaItem>
+          <ChatMessageMeta aria-label="said by you at 4:27 PM">
+          <ChatMessageMetaItem>
+                    2:47 PM
+          </ChatMessageMetaItem>
+        </ChatMessageMeta>
         </ChatMessage>
       ),
     }, 
@@ -107,7 +109,7 @@ const submitMessage = () => {
         paddingTop="space50"
       >
       <ChatComposer
-          maxHeight="size10"
+          maxHeight="size20"
           config={{
             namespace: 'foo',
             onError: (e) => {

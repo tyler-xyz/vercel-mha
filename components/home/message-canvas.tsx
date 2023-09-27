@@ -1,10 +1,11 @@
 import React from "react";
 import { DateTime } from "luxon";
 import { isDate } from "util/types";
-import { Box, ChatMessage, ChatBubble, ChatMessageMeta, ChatMessageMetaItem} from "@twilio-paste/core"
+import { Button,Box, ChatMessage, ChatBubble, ChatMessageMeta, ChatMessageMetaItem} from "@twilio-paste/core"
 import { ChatIcon } from "@twilio-paste/icons/cjs/ChatIcon";
-import Input from "./message-input";
+import InputAndAdd from "./input-add";
 import { Conversation, Message, Paginator } from "@twilio/conversations";
+import { UserSessionContext } from "./session";
 
 //conversations connection
 type Props= {
@@ -58,9 +59,7 @@ export function ChatMessageWrapper({
     const sentTime = DateTime.fromJSDate(message.created).toLocaleString(
         DateTime.TIME_SIMPLE
     );
-    //
-    //9/26/23 5pm Left-Off Point
-    //
+    //begin return
     return (
         <ChatMessage variant={message.id === 1 ? "inbound" : "outbound"}>
           <ChatBubble>
@@ -69,7 +68,7 @@ export function ChatMessageWrapper({
               if (media.isImage) {
                 return <img key={i} width="50%" src={media.url} />;
               } else {
-                // TODO: Add icon
+                // optional add icon TO-DO
                 return (
                   <a key={i} href={media.url} target="_blank" rel="noreferrer">
                     Attachment
@@ -87,7 +86,8 @@ export function ChatMessageWrapper({
         </ChatMessage>
       );
     }
-    
+    //end ChatMessage wrapper
+    //begin
     export default class MessagesView extends React.Component<Props, State> {
       static contextType = UserSessionContext;
       declare context: React.ContextType<typeof UserSessionContext>;
@@ -102,7 +102,7 @@ export function ChatMessageWrapper({
           files: null,
         };
       }
-    
+    //date format and display
       formatDate(date: Date): string {
         return DateTime.fromJSDate(date).toLocaleString(DateTime.DATETIME_SHORT);
       }
@@ -126,13 +126,13 @@ export function ChatMessageWrapper({
           await messageBuilder.build().send();
         })(message);
       };
-    
+    //add media, may delete if feature shown
       onAddMedia = (e: React.ChangeEvent<HTMLInputElement>) => {
         this.setState({
           files: e.target.files,
         });
       };
-    
+    //load messages function
       async loadMessages() {
         const messages: Message[] = [];
     
@@ -156,7 +156,7 @@ export function ChatMessageWrapper({
           messages: chatMessages,
         });
       }
-    
+    //begin makeChatMessage chat message assemble
       async makeChatMessage(message: Message) {
         const body = message.body || "";
         const created = message.dateCreated || new Date();
@@ -174,7 +174,7 @@ export function ChatMessageWrapper({
             });
           }
         }
-    
+    //message data return
         return new MessageData({
           id: this.context?.session?.user?.username === message.author ? 0 : 1,
           message: body,
@@ -183,7 +183,8 @@ export function ChatMessageWrapper({
           media,
         });
       }
-    
+      //end makeChatMessage
+      //begin addMessage event listener
       addMessageListener(conversation: Conversation) {
         conversation.on("messageAdded", (message) => {
           this.makeChatMessage(message)
@@ -198,7 +199,7 @@ export function ChatMessageWrapper({
             .catch((err) => console.error(err));
         });
       }
-    
+    //end addMessage event listener
       async componentDidMount(): Promise<void> {
         this.addMessageListener(this.props.conversation);
     
@@ -206,7 +207,7 @@ export function ChatMessageWrapper({
     
         this.scrollMessageList();
       }
-    
+    // scroll message
       scrollMessageList() {
         if (!this.messageListDiv || !this.messageListDiv.current) {
           return;
@@ -215,7 +216,7 @@ export function ChatMessageWrapper({
         this.messageListDiv.current.scrollTop =
           this.messageListDiv.current.scrollHeight + 100;
       }
-    
+    //mounting conversation
       async componentDidUpdate(prevProps: Props): Promise<void> {
         this.scrollMessageList();
     
@@ -230,7 +231,7 @@ export function ChatMessageWrapper({
     
         this.scrollMessageList();
       }
-    
+    //begin react render
       render() {
         const css = {
           width: "100%",
@@ -241,7 +242,7 @@ export function ChatMessageWrapper({
           paddingLeft: 20,
           paddingRight: 20,
         };
-    
+        //message canvas return
         return (
           <>
             <Box
@@ -257,12 +258,13 @@ export function ChatMessageWrapper({
               </div>
             </Box>
             <Box height="60px">
-              <Input
+              <InputAndAdd
                 label="Send a Message"
                 onAdd={this.onAddMessage}
                 button={<ChatIcon decorative={false} title="Send a Message" />}
               />
-              <input type="file" onChange={this.onAddMedia} multiple />
+              {/* media attachment */}
+              {/* <input type="file" onChange={this.onAddMedia} multiple /> */}
             </Box>
           </>
         );

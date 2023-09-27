@@ -257,7 +257,7 @@ export function ChatMessageWrapper({
               </div>
             </Box>
             <Box height="60px">
-              <InputAndAdd
+              <Input
                 label="Send a Message"
                 onAdd={this.onAddMessage}
                 button={<ChatIcon decorative={false} title="Send a Message" />}

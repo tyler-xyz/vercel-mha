@@ -3,11 +3,8 @@ import { Box, ChatComposer,
     ChatBookend, ChatBookendItem, ChatBubble, ChatEvent, ChatLogger, ChatMessage,
      ChatMessageMeta, ChatMessageMetaItem, useChatLogger, ChatLog } from "@twilio-paste/core";
 import { SendButtonPlugin } from './send-button';
-import { EnterKeySubmitPlugin } from './send-on-enter';
 import { ClearEditorPlugin } from "@twilio-paste/lexical-library";
 import { $getRoot, EditorState, RootNode } from "lexical";
-import useScroll from '@/lib/hooks/use-scroll';
-import { LexicalEditor } from '@twilio-paste/lexical-library';
 import NavWarning from '../home/nav-warning';
 
 const ChatDialog = () => {

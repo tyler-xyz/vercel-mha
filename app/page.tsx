@@ -12,7 +12,6 @@ export default async function Home() {
     <>
     {/* adding recaptcha */}
     <ReCaptchaProvider reCaptchaKey="6Lc2qS4oAAAAACIcdUjUVeeviZGRFaLVvN_aIUL1">
-      
     {/* begin orig code */}
       <div className="z-10 w-full max-w-xl px-5 xl:px-0">
         <h3
@@ -38,8 +37,6 @@ export default async function Home() {
           <Link
             className="group flex max-w-fit items-center justify-center space-x-2 rounded-full border border-red bg-red px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-red"
             href="/chat"
-            // target="_self"
-            // rel="noopener noreferrer"
           >
             <p>Let&apos;s Chat</p>
             <svg 
@@ -49,7 +46,7 @@ export default async function Home() {
               stroke-width="1.5" 
               stroke="currentColor" 
               className="w-5 h-5">
-  
+
                 <path 
                   stroke-linecap="round" 
                   stroke-linejoin="round" 
@@ -58,20 +55,11 @@ export default async function Home() {
               </svg>
           </Link>
         </div>
-       
+      {/* terms  */}
       <div>
-        {/* terms  */}
-        {/* <p
-          className="mx-auto mt-6 animate-fade-up text-center text-gray-500 opacity-0 md:text-sm inline-flex"
-          style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
-        >
-        By continuing, you accept our{" "}
-        </p> */}
         <EulaButton />
       </div>
-
        {/* navigation warning  */}
-
         <NavWarning />
           {/* basecode for navwarning */}
         {/* <div className="alert alert-info bg-indigo-500/50 mx-auto mt-6 flex animate-fade-up items-center justify-center space-x-5 ">

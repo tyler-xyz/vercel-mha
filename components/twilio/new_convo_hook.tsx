@@ -1,6 +1,9 @@
 // Modified from 'https://www.twilio.com/docs/conversations/api/conversation-scoped-webhook-resource'
-// combined configuration listed in gen-webhook.tsx
+// combined configuration listed in QRG and Slack
 //permanent studio webhook address listed below.
+
+export default function StudioHook() {
+
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 //added flowSid for stored value
@@ -18,5 +21,6 @@ client.conversations.v1.conversations('ISfbfcb4d13de946128ef116ec228e2ab3')
          'configuration.replayAfter': 0,
          target: 'studio',        
        })
-       //{ sid:true }came from VS autocorrect, wanted to assign value
+       //{ sid:true }came from VS autocorrect, wanted to assign value???
       .then((webhook: { sid: true ; }) => console.log(webhook.sid));
+    }

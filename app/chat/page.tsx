@@ -6,7 +6,7 @@ import { Conversation } from "@twilio/conversations";
 import { ChatComposer } from "@twilio-paste/core";
 import { Box } from "framer-motion";
 import { Theme } from "@twilio-paste/core/dist/theme";
-import ChatDialog from "@/components/home/chat-dialog";
+import ChatDialog from "@/components/twilio/chat-dialog";
 import Loading from "@/components/home/loading-ui";
 import { Suspense } from "react";
 

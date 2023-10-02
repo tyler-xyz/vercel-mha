@@ -1,6 +1,5 @@
 import twilio from 'twilio';
 import AccessToken from 'twilio/lib/jwt/AccessToken';
-import { ChatGrant } from 'twilio/lib/jwt/AccessToken';
 
 // apply permanent twilio Vars from .env
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
@@ -12,11 +11,11 @@ const serviceSid = process.env.TWILIO_CHAT_SERVICE_SID;
 const identity = 'Anonymous';
 //added flowSid for stored value
 const flowSid = process.env.STUDIO_FLOW_SID;
-//connect to twilio acct client
-const client = require('twilio')(accountSid, authToken);
 
-//connect to the conversation via webhook
-export default function getToken() {
+export default function createSession() {
+    //connect to twilio acct client
+    const client = require('twilio')(accountSid, authToken);
+    //Accesstoken
     const AcessToken = require('twilio').jwt.AccessToken;
     const ChatGrant = AccessToken.ChatGrant;
     //issue chatGrant
@@ -28,9 +27,13 @@ export default function getToken() {
         accountSid,
         twilioApiKey,
         twilioApiSecret,
-        identity
+        identity,
+        flowSid,
+        serviceSid
     );
     token.addGrant(chatGrant);
     //return the new chat access token
     return token.toJwt();
 }
+
+module.exports = { generate : createSession};

@@ -22,7 +22,7 @@ export default function getToken() {
     const chatGrant = new ChatGrant({
         serviceSid: serviceSid,
     });
-    //
+    //creates new access token
     const token = new AcessToken(
         accountSid,
         twilioApiKey,
@@ -30,5 +30,6 @@ export default function getToken() {
         identity
     );
     token.addGrant(chatGrant);
+    //return the new chat access token
     return token.toJwt();
 }

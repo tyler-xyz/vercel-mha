@@ -1,5 +1,6 @@
 import twilio from 'twilio';
 import AccessToken from 'twilio/lib/jwt/AccessToken';
+import { ChatGrant } from 'twilio/lib/jwt/AccessToken';
 
 // apply permanent twilio Vars from .env
 const accountSid = process.env.TWILIO_ACCOUNT_SID;

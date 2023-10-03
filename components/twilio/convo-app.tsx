@@ -26,8 +26,8 @@ import { Client } from "@twilio/conversations";
 
 //get client from chatGrant token
     async function getClient(){
-        const { accountSid, apiKey, apiSecret } = await chatGrant();
-        const client = new Client({ accountSid , apiKey, apiSecret });
+        const { accountSid, authToken, apiKey, apiSecret } = await chatGrant();
+        const client = new Client( accountSid , authToken );
         return client;
         }
 

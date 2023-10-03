@@ -7,6 +7,7 @@ const ChatGrant = AccessToken.ChatGrant;
 export default async function createSession(){
     // Vars from .env
     const twilioAcctSid = process.env.TWILIO_ACCOUNT_SID;
+    const authToken = process.env.TWILIO_AUTH_TOKEN;
     const twilioApiKey = process.env.TWILIO_API_KEY;
     const twilioApiSecret = process.env.TWILIO_API_SECRET;
 
@@ -19,7 +20,7 @@ export default async function createSession(){
         serviceSid: serviceSid,
     });
     //creates new access token
-    const token = new AccessToken(accountSid, twilioApiKey,
+    const token = new AccessToken(accountSid, authToken, twilioApiKey,
         twilioApiSecret, {identity: identity},
         );
 

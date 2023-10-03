@@ -36,6 +36,17 @@ import { Client, State } from "@twilio/conversations";
             if (state === 'initialized') {
                 // Use the client
                 return client;
+
+             //monitor token expiry
+        client.on("tokenAboutToExpire", async () => {
+            const token = await chatGrant();
+            client.updateToken(token);    
+            });
+
+        client.on("tokenExpired", async () => {
+            const token = await chatGrant();
+            client.updateToken(token);    
+            });
             }
         });
         }

@@ -3,9 +3,6 @@
 //permanent studio webhook address listed below.
 export default function StudioHook() {
 
-const accountSid = process.env.TWILIO_ACCOUNT_SID;
-const authToken = process.env.TWILIO_AUTH_TOKEN;
-const 
 //added flowSid for stored value
 const flowSid = process.env.STUDIO_FLOW_SID;
 //connect to twilio acct

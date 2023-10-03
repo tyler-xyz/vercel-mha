@@ -6,7 +6,7 @@ import {
     Toaster, useToaster,
 } from "@twilio-paste/core";
 import { Theme } from "@twilio-paste/core/dist/theme";
-import getToken  from "./session";
+import getToken  from "../../app/session";
 import axios from 'axios';
 
 //assign perm vars

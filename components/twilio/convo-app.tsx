@@ -6,7 +6,7 @@ import createSession from "@/app/session";
 import { Message } from '@twilio/conversations';
 import { Box, Grid, Column } from "@twilio-paste/core";
 import { User, Conversation, Participant   } from "@twilio/conversations";
-import { Client } from "@twilio/conversations";
+import { Client, State } from "@twilio/conversations";
 
 //assign perm vars
     const serviceSid = process.env.TWILIO_CHAT_SERVICE_SID; 
@@ -27,8 +27,17 @@ import { Client } from "@twilio/conversations";
 //get client from chatGrant token
     async function getClient(){
         const { accountSid, authToken, apiKey, apiSecret } = await chatGrant();
-        const client = new Client( accountSid , authToken );
-        return client;
+        const client: Client = new Client( accountSid , authToken );
+        client.on('stateChanged', (state: State) => {
+            if (state === "failed") {
+                // The client failed to initialize
+                return("Twilio Client connection has failed to init");
+            }
+            if (state === 'initialized') {
+                // Use the client
+                return client;
+            }
+        });
         }
 
 //get conversation from client
@@ -39,7 +48,7 @@ import { Client } from "@twilio/conversations";
 
 // get messages from conversation
     async function getMessages(conversation){
-        const messages = await conversation.getMEssages();
+        const messages = await conversation.getMssages();
         return messages;
     }
 

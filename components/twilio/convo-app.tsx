@@ -6,7 +6,7 @@ import createSession from "@/app/session";
 import { Message } from '@twilio/conversations';
 import { Box, Grid, Column } from "@twilio-paste/core";
 import { User, Conversation, Participant   } from "@twilio/conversations";
-import { Client, State } from "@twilio/conversations";
+import { Client, State, ConnectionState } from "@twilio/conversations";
 
 //assign perm vars
     const serviceSid = process.env.TWILIO_CHAT_SERVICE_SID; 
@@ -51,6 +51,11 @@ import { Client, State } from "@twilio/conversations";
         });
         }
 
+//init conversation conversation client
+async function initConversations(){
+    window.conversationsClient = Client;
+    
+}
 //get conversation from client
     async function getConversation(client) {
         const conversation = await client.getConversationByUniqueName('conversation-unique-name').fetch();

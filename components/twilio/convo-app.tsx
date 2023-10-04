@@ -50,24 +50,58 @@ import { Client, State, ConnectionState } from "@twilio/conversations";
             }
         });
         }
-
-//init conversation conversation client
-async function initConversations(){
-    window.conversationsClient = Client;
-    
-}
-//get conversation from client
-    async function getConversation(client) {
-        const conversation = await client.getConversationByUniqueName('conversation-unique-name').fetch();
-        return conversation;
+//function to handle conversation scoped webhook
+async function connectStudioFlow (){
+// const client from getClient, const participant join
+    const client =  await getClient();
+    const join = await Conversation.join();
+    const leave = await Conversation.leave();
+    const messages = await getMessages;
+// create conversation scoped webhook to studio flow
+client.conversations.v1
+      .conversations('ISfbfcb4d13de946128ef116ec228e2ab3')
+      .webhooks
+      .create({
+         'configuration.method': 'GET',
+         'configuration.filters': ['onMessageAdded', 'onConversationAdded'],
+         'configuration.url': 'https://webhooks.twilio.com/v1/Accounts/ACa3fc06fd70fef1a4fef034c857fdee2a/Flows/FW8b2be02131c5ae2c69694880c7f9b00e',
+         'configuration.flowSid': flowSid,
+         'configuration.replayAfter': 0,
+         target: 'studio',        
+       })
+      .then(webhook => join);
+// fetch conversation scoped webhook from studio flow
+client.conversations.v1
+      .conversations('ISfbfcb4d13de946128ef116ec228e2ab3')
+      .webhooks.sid
+      .fetch()
+      .then(webhook => console.log(webhook.sid));
+// read conversation scoped webhook from studio flow
+client.conversations.v1
+      .conversations('ISfbfcb4d13de946128ef116ec228e2ab3')
+      .webhooks.sid
+      .list({limit: 20})
+      .then(webhooks => webhooks.forEach(w => console.log(w.sid)));
+// update conversation scoped webhook from studio flow
+client.conversations.v1
+      .conversations('ISfbfcb4d13de946128ef116ec228e2ab3')
+      .webhooks.sid
+      .update({'configuration.filters':'onMessageAdded'})
+      .then(webhook => messages);
+// delete the webhook
+client.conversations.v1
+      .conversations('ISfbfcb4d13de946128ef116ec228e2ab3')
+      .webhooks.sid
+      .remove()
+      .then(webhook => leave);
     }
+
 
 // get messages from conversation
-    async function getMessages(conversation){
-        const messages = await conversation.getMssages();
-        return messages;
-    }
-
+async function getMessages(conversation){
+    const messages = await conversation.getMssages();
+    return messages;
+}
 // send message to conversation
     async function sendMessage(conversation, body) {
         await conversation.sendMessage(body);

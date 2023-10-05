@@ -1,23 +1,27 @@
 "use client";
 import Image from "next/image";
+import { createRoot } from "react-dom/client";
 import React from "react";
 import { Theme } from "@twilio-paste/core/dist/theme";
 import Loading from "@/components/home/loading-ui";
 import { Suspense } from "react";
 import { App } from "./app";
-/* this is the index page for the Chat Page */
+import "./styles.css";
 
-export default function Chat() {
-  return (
-    <>
+/* this is the index page for the Chat Page */
 {/* box container for chatWindow demo */}
-<div className="z-10 w-full max-w-xl px-5 xl:px-2 h-screen p-2 border-2">
+{/* <div className="z-10 w-full max-w-xl px-5 xl:px-2 h-screen p-2 border-2"> */}
+// </div>
+export default function Idgaf() {
+const container = document.getElementById("root");
+const rootElement = createRoot(container!);
+return(
+rootElement.render(
     <Theme.Provider theme='twilio'>
     <Suspense fallback={<Loading />}>
       <App />
     </Suspense>
     </Theme.Provider>
-</div>
-    </>
-  );
+)
+);
 }

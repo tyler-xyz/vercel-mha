@@ -7,7 +7,6 @@ import {
 } from "@twilio-paste/core";
 import { Theme } from "@twilio-paste/core/dist/theme";
 import getToken  from "../../app/session";
-import axios from 'axios';
 
 //assign perm vars
     const serviceSid = process.env.TWILIO_CHAT_SERVICE_SID; 

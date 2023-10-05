@@ -12,7 +12,7 @@ import "./styles.css";
 {/* box container for chatWindow demo */}
 {/* <div className="z-10 w-full max-w-xl px-5 xl:px-2 h-screen p-2 border-2"> */}
 // </div>
-const container = document.getElementById("root");
+const container = document.getElementById("_app");
 const rootElement = createRoot(container!);
 rootElement.render(
     <Theme.Provider theme='twilio'>

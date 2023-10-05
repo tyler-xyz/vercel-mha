@@ -1,26 +1,24 @@
 "use client";
 import Image from "next/image";
-import { nFormatter } from "@/lib/utils";
+import { render } from "react-dom";
 import React from "react";
-import { Box } from "framer-motion";
 import { Theme } from "@twilio-paste/core/dist/theme";
-import ChatDialog from "@/components/twilio/chat-dialog";
 import Loading from "@/components/home/loading-ui";
 import { Suspense } from "react";
-/* this is the index page for the Chat Page */
+import { App } from "./app";
+import "./styles.css";
 
-export default function Chat() {
-  console.log('Chat test')
-  return (
-    <>
+/* this is the index page for the Chat Page */
 {/* box container for chatWindow demo */}
-<div className="z-10 w-full max-w-xl px-5 xl:px-2 h-screen p-2 border-2">
+{/* <div className="z-10 w-full max-w-xl px-5 xl:px-2 h-screen p-2 border-2"> */}
+// </div>
+const rootElement = document.getElementById("root");
+render(
+
     <Theme.Provider theme='twilio'>
     <Suspense fallback={<Loading />}>
-      <ChatDialog />
+      <App />
     </Suspense>
-    </Theme.Provider>
-</div>
-    </>
-  );
-}
+    </Theme.Provider>,
+  rootElement
+);

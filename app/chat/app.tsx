@@ -1,4 +1,5 @@
 import { Box } from "@twilio-paste/box";
+import { Heading } from "@twilio-paste/core";
 import React from "react";
 
 import { ChatDialog } from "@/components/twilio/chat-dialog";
@@ -7,9 +8,11 @@ import { CustomerChatLog } from "@/components/twilio/chat-log";
 export const App: React.FC = () => {
   return (
     <Box>
-      <ChatDialog>
+     <Heading as="h4" variant="heading40">
+        Live Chat
+      </Heading>
         <CustomerChatLog />
-      </ChatDialog>
+
     </Box>
   );
 };

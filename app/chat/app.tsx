@@ -11,7 +11,6 @@ export const App: React.FC = () => {
       </Heading>
       <Separator orientation="vertical" horizontalSpacing="space20" />
         <CustomerChatLog />
-
     </Box>
   );
 };

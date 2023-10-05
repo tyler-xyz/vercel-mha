@@ -11,6 +11,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@lexical/utils": "^0.12.2",
     "@next-auth/prisma-adapter": "^1.0.5",
     "@prisma/client": "^4.8.1",
     "@radix-ui/react-popover": "^1.0.2",
@@ -25,7 +26,7 @@
     "@twilio-paste/chat-log": "^5.1.0",
     "@twilio-paste/core": "^20.3.0",
     "@twilio-paste/icons": "^12.1.0",
-    "@twilio-paste/lexical-library": "^4.0.0",
+    "@twilio-paste/lexical-library": "^4.1.0",
     "@twilio-paste/text": "^10.0.0",
     "@twilio/conversations": "^2.4.1",
     "@types/luxon": "^3.3.2",

@@ -11,7 +11,7 @@ import {
 } from "@twilio-paste/chat-log";
 import { ChatComposer } from "@twilio-paste/chat-composer";
 import { Box } from "@twilio-paste/box";
-import { AutoScrollPlugin, $getRoot } from "@twilio-paste/lexical-library";
+import { $getRoot } from "@twilio-paste/lexical-library";
 import { EditorState } from "@twilio-paste/lexical-library";
 import { SendButtonPlugin } from "./sendButtonPlugin";
 import { createNewMessage } from "./helpers";
@@ -93,6 +93,8 @@ export const CustomerChatLog: React.FC = () => {
         columnGap="space30"
         paddingX="space70"
         paddingY="space50"
+        overflowX="hidden" 
+        overflowY="scroll"
       >
         <ChatComposer
           maxHeight="size10"
@@ -103,11 +105,11 @@ export const CustomerChatLog: React.FC = () => {
             }
           }}
           ariaLabel="Message"
-          placeholder="Type here..."
+          placeholder="Type your message here..."
           onChange={handleComposerChange}
         >
           <>
-            <AutoScrollPlugin scrollRef={scrollRef} />
+            {/* <AutoScrollPlugin scrollRef={scrollRef} /> */}
             <SendButtonPlugin
               onClick={() => {
                 push(createNewMessage(message));

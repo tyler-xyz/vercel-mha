@@ -6,7 +6,7 @@ import { CustomerChatLog } from "@/components/twilio/chat-log";
 
 export const App: React.FC = () => {
   return (
-    <Box position="absolute" bottom="space70" right="space70">
+    <Box>
       <ChatDialog>
         <CustomerChatLog />
       </ChatDialog>

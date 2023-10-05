@@ -9,7 +9,7 @@ export const App: React.FC = () => {
      <Heading as="h4" variant="heading40">
         Live Chat
       </Heading>
-      <Separator orientation="vertical" horizontalSpacing="space50" />
+      <Separator orientation="horizontal" horizontalSpacing="space50" />
         <CustomerChatLog />
     </Box>
   );

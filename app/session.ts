@@ -1,10 +1,11 @@
+
 import twilio from 'twilio';
 
 //permanent constants
 const AccessToken = twilio.jwt.AccessToken;
 const ChatGrant = AccessToken.ChatGrant;
 
-export default async function createSession(){
+export default async function createSession(): Promise<string> {
     // Vars from .env
     const twilioAcctSid = process.env.TWILIO_ACCOUNT_SID;
     const authToken = process.env.TWILIO_AUTH_TOKEN;
@@ -20,8 +21,8 @@ export default async function createSession(){
         serviceSid: serviceSid,
     });
     //creates new access token
-    const token = new AccessToken(accountSid, authToken, twilioApiKey,
-        twilioApiSecret, {identity: identity},
+    const token = new AccessToken({twilioAcctSid}, authToken, twilioApiKey,
+        twilioApiSecret
         );
 
     token.addGrant(chatGrant);
@@ -30,5 +31,3 @@ export default async function createSession(){
         token.toJwt()
     );
 }
-    // return the token as a string to the console
-        console.log(token.toJwt());

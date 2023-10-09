@@ -1,6 +1,6 @@
 // components/twilio.ts
 /* Initialization */
-import {Client, State } from twilio
+import {Client, State } from '@twilio/conversations';
  
 const client: Client = new Client("token");
 client.on('stateChanged', (state: State) => {

@@ -6,7 +6,7 @@ import {
     Toaster, useToaster,
 } from "@twilio-paste/core";
 import { Theme } from "@twilio-paste/core/dist/theme";
-import getToken  from "../../app/session";
+import getToken  from "../../session";
 
 //assign perm vars
     const serviceSid = process.env.TWILIO_CHAT_SERVICE_SID; 

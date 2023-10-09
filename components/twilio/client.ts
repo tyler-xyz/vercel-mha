@@ -1,13 +1,15 @@
 // components/twilio.ts
-import { Client } from "@twilio/conversations";
+/* Initialization */
+import {Client, State } from twilio
+ 
+const client: Client = new Client("token");
+client.on('stateChanged', (state: State) => {
+    if (state === "failed") {
+        // The client failed to initialize
+        return;
+    }
 
-const accountSid = process.env.TWILIO_ACCOUNT_SID;
-const authToken = process.env.TWILIO_AUTH_TOKEN;
-
-export default function getClient(){
-    const acctString = {accountSid};
-    const client: Client = new Client(acctString, authToken);
-}
-
-
-
+    if (state === 'initialized') {
+        // Use the client
+    }
+});

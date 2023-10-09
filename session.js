@@ -1,11 +1,11 @@
 
-import twilio from 'twilio';
 
 //permanent constants
+const twilio = require('twilio');
 const AccessToken = twilio.jwt.AccessToken;
 const ChatGrant = AccessToken.ChatGrant;
 
-export default async function createSession(): Promise<string> {
+export default async function createSession() {
     // Vars from .env
     const twilioAcctSid = process.env.TWILIO_ACCOUNT_SID;
     const authToken = process.env.TWILIO_AUTH_TOKEN;

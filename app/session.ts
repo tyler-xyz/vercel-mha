@@ -21,9 +21,12 @@ export default async function createSession(): Promise<string> {
         serviceSid: serviceSid,
     });
     //creates new access token
-    const token = new AccessToken({twilioAcctSid}, authToken, twilioApiKey,
-        twilioApiSecret
-        );
+    const token = new AccessToken(
+        twilioAcctSid,
+        authToken,
+        twilioApiKey,
+        twilioApiSecret,
+      );
 
     token.addGrant(chatGrant);
     //return the new chat access token

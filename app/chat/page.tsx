@@ -4,7 +4,7 @@ import React from "react";
 import { Theme } from "@twilio-paste/core/dist/theme";
 import Loading from "@/components/home/loading-ui";
 import { Suspense } from "react";
-import { App } from "./app";
+import { App } from "@/components/twilio/app";
 /* this is the index page for the Chat Page */
 
 export default function Chat() {

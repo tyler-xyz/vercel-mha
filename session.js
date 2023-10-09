@@ -1,36 +1,32 @@
-
-
-//permanent constants
-const twilio = require('twilio');
-const AccessToken = twilio.jwt.AccessToken;
+const AccessToken = require('twilio').jwt.AccessToken;
 const ChatGrant = AccessToken.ChatGrant;
 
-export default async function createSession() {
-    // Vars from .env
-    const twilioAcctSid = process.env.TWILIO_ACCOUNT_SID;
-    const authToken = process.env.TWILIO_AUTH_TOKEN;
-    const twilioApiKey = process.env.TWILIO_API_KEY;
-    const twilioApiSecret = process.env.TWILIO_API_SECRET;
+// Used when generating any kind of tokens
+// To set up environmental variables, see http://twil.io/secure
+const twilioAccountSid = process.env.TWILIO_ACCOUNT_SID;
+const twilioApiKey = process.env.TWILIO_API_KEY;
+const twilioApiSecret = process.env.TWILIO_API_SECRET;
 
-    // Vars to pass for chatSid and identity
-    const serviceSid = process.env.TWILIO_CHAT_SERVICE_SID;
-    const identity = 'Anonymous';
+// Used specifically for creating Chat tokens
+const serviceSid = process.env.TWILIO_CHAT_SERVICE_SID;
+const identity = 'user@example.com';
 
-    //issue chatGrant
-    const chatGrant = new ChatGrant({
-        serviceSid: serviceSid,
-    });
-    //creates new access token
-    const token = new AccessToken(
-        twilioAcctSid,
-        authToken,
-        twilioApiKey,
-        twilioApiSecret,
-      );
+// Create a "grant" which enables a client to use Chat as a given user,
+// on a given device
+const chatGrant = new ChatGrant({
+  serviceSid: serviceSid,
+});
 
-    token.addGrant(chatGrant);
-    //return the new chat access token
-    return (
-        token.toJwt()
-    );
-}
+// Create an access token which we will sign and return to the client,
+// containing the grant we just created
+const token = new AccessToken(
+  twilioAccountSid,
+  twilioApiKey,
+  twilioApiSecret,
+  {identity: identity}
+);
+
+token.addGrant(chatGrant);
+
+// Serialize the token to a JWT string
+console.log(token.toJwt());

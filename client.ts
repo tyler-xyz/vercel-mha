@@ -14,7 +14,7 @@ async function getToken() {
     }
 //
 async function getClient(){
-    const client: Client = new Client("token");
+    const client: Client = new Client(await getToken());
     client.on('stateChanged', (state: State) => {
     if (state === "failed") {
         return(

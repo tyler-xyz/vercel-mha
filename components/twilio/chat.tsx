@@ -1,7 +1,9 @@
 // components/Chat.tsx
 import { useState, useEffect } from 'react';
 import { Conversation, Message } from '@twilio/conversations';
-import client from './client';
+import { Client } from '@twilio/conversations';
+
+const client = new Client('token'); // Your Twilio token here!
 
 interface ChatProps {
  conversationSid: string;

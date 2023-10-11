@@ -1,3 +1,4 @@
+import { stringify } from 'querystring';
 import twilio from 'twilio';
 
 const AccessToken = twilio.jwt.AccessToken;
@@ -10,8 +11,11 @@ const secret = process.env.TWILIO_API_SECRET || "";
 const serviceSid = process.env.TWILIO_CHAT_SERVICE_SID;
 const identity = 'anonymous';
 
+export default async function newSession(params:type) {
+//unsure if client is needed here.
+const client = twilio(keySid, secret, { accountSid })
+
 // Create a "grant" which enables a client to use Chat as a given user,
-// on a given device
 const chatGrant = new ChatGrant({
   serviceSid: serviceSid,
 });
@@ -29,3 +33,9 @@ token.addGrant(chatGrant);
 
 // Serialize the token to a JWT string
 console.log(token.toJwt());
+
+//return token as string
+return {
+  jwt: token.toJwt()
+};
+}

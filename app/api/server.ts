@@ -3,9 +3,9 @@ import twilio from 'twilio';
 const AccessToken = twilio.jwt.AccessToken;
 const ChatGrant = AccessToken.ChatGrant;
 
-const accountSid = process.env.TWILIO_ACCOUNT_SID || "";
-const keySid = process.env.TWILIO_API_KEY || "";
-const secret = process.env.TWILIO_API_SECRET || "";
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const keySid = process.env.TWILIO_API_KEY;
+const secret = process.env.TWILIO_API_SECRET;
 // Used specifically for creating Chat tokens
 const serviceSid = process.env.TWILIO_CHAT_SERVICE_SID;
 const identity = 'anonymous';

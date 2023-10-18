@@ -70,7 +70,7 @@ export const CustomerChatLog: React.FC = () => {
   );
   const [message, setMessage] = React.useState("");
   
-  const handleComposerChange = (editorState: EditorState): void => {
+  const handleComposerChange:any = (editorState: EditorState) => {
     editorState.read(() => {
       const text = $getRoot().getTextContent();
       setMessage(text);

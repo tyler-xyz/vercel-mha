@@ -13,7 +13,7 @@ export const SendButtonPlugin = ({ onClick = () => {}}): JSX.Element => {
 
   const handleSend = (): void => {
     onClick();
-
+   
     // editor.dispatchCommand(CLEAR_EDITOR_COMMAND, undefined);
 
     editor.update(() => {
@@ -26,14 +26,14 @@ export const SendButtonPlugin = ({ onClick = () => {}}): JSX.Element => {
       <Button variant="primary_icon" size="reset" onClick={handleSend}>
         <SendIcon decorative={false} title="Send message" />
       </Button>
-      <input
+      {/* <input
         type="text"
         onKeyDown={(event) => {
           if (event.key === 'Enter') {
             handleSend();
           }
         }}
-        />
+        /> */}
     </Box>
   );
 };

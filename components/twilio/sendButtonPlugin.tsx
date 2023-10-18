@@ -26,6 +26,14 @@ export const SendButtonPlugin = ({ onClick = () => {}}): JSX.Element => {
       <Button variant="primary_icon" size="reset" onClick={handleSend}>
         <SendIcon decorative={false} title="Send message" />
       </Button>
+      <input
+        type="text"
+        onKeyDown={(event) => {
+          if (event.key === 'Enter') {
+            handleSend();
+          }
+        }}
+        />
     </Box>
   );
 };

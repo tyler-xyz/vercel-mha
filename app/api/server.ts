@@ -1,25 +1,34 @@
 //imports
-import twilio, { Twilio, webhook } from 'twilio';
+import twilio, { webhook } from 'twilio';
 import axios from 'axios';
 import {
   Conversation, Message, Participant,
-  Media, Paginator, Client, State, User
+  Media, Paginator,State, User
 } from "@twilio/conversations";
 
-//env
-const accountSid = process.env.TWILIO_ACCOUNT_SID;
+//perm const
+const accountSid = process.env.TWILIO_ACCOUNT_SID as string;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
-const keySid = process.env.TWILIO_API_KEY;
-const secret = process.env.TWILIO_API_SECRET;
+const keySid = process.env.TWILIO_API_KEY as string;
+const secret = process.env.TWILIO_API_SECRET as string;
 const serviceSid = process.env.TWILIO_CHAT_SERVICE_SID;
 const flowSid = process.env.STUDIO_FLOW_SID;
 const syncSid = process.env.TWILIO_SYNC_SERVICE_SID; 
-//assigned
+
+
+// Define the required arguments
+const descriptor = { /* Conversation descriptor properties */ } as any;
+const sid = "serviceSid";
+const links = { /* Conversation links properties */ } as any;
+const configuration = { /* Client configuration properties */ } as any;
+const services = { /* Conversation services properties */ } as any;
+
+
 const AccessToken = twilio.jwt.AccessToken;
 const ChatGrant = AccessToken.ChatGrant;
 const identity = 'anonymous';
 const client = twilio(accountSid, authToken);
-const conversations = Conversation ;
+const conversations = new Conversation(descriptor, sid, links, configuration, services);
 
 //begin createChat
 async function createChat() {
@@ -35,11 +44,21 @@ async function createChat() {
     'configuration.replayAfter': 0,
     target: 'studio', 
   })
-  .then(webhook => {
-    console.log(webhook.sid),
+  .then((webhook: { sid: any; }) => {
+    console.log(webhook.sid)
+    
   })
 }
 //end createChat
+//begin getClient
+async function getTwilioClient(){
+  //
+  // const newClient: Client  = new twilio(keySid, secret, { accountSid : accountSid});
+  const newClient = new (twilio as any)(keySid, secret,{ accountSid : accountSid});
+
+  return newClient;
+}
+//end getClient
 
 //begin chatToken grant
 async function chatToken() {
@@ -49,6 +68,7 @@ async function chatToken() {
   });
 // list the service sid being used.
   console.log("Using conversations service " + serviceSid);
+
 //create token based on chatGrant listed above.
   const token = new AccessToken(
     accountSid,
@@ -63,43 +83,8 @@ async function chatToken() {
 }
 //end chatToken grant
 
-//begin getClient
-async function getTwilioClient(){
-  //
-  const token = await chatToken();
-  const newClient: Client = new Client(token);
-  return newClient;
-}
-//end getClient
-
-//begin addParticipant
-async function addParticipant() {
-
-  client.conversations.v1.conversations(serviceSid)
-  .participants
-  .create({identity: identity})
-  .then(participant => 
-      console.log("added participant by sid:" + participant.sid
-    ));
-}
-//end addParticipant
-
-//begin getMessages
-async function getMessages() {
-
-  const client = await createChat();
-  client.conversations.Conversation(serviceSid)
-  .messages
-  .list()
-  .then(
-    messages.setBody(messages);
-  )
-}
-//end getMessages
-//complete module export
-module.exports =
-      {chatToken},
-      {createChat},
-      {getTwilioClient},
-      {getMessages},
-      {addParticipant};
+module.exports = {
+  chatToken,
+  createChat,
+  getTwilioClient
+};

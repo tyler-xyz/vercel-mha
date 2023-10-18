@@ -6,12 +6,12 @@ import { ReCaptchaProvider } from "next-recaptcha-v3";
 import EulaButton from "@/components/home/terms-button";
 import NavWarning from "@/components/home/nav-warning";
 import { Box } from "@twilio-paste/box";
+import Footer from "@/components/layout/footer";
 
 export default async function Home() {
   return (
     <>
-    {/* adding recaptcha */}
-    <ReCaptchaProvider reCaptchaKey="6Lc2qS4oAAAAACIcdUjUVeeviZGRFaLVvN_aIUL1">
+   
     {/* begin orig code */}
       <div className="z-10 w-full max-w-xl px-5 xl:px-0">
         <h3
@@ -34,6 +34,8 @@ export default async function Home() {
           className="mx-auto mt-6 flex animate-fade-up items-center justify-center space-x-5 opacity-0"
           style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
         >
+           {/* adding recaptcha */}
+          <ReCaptchaProvider reCaptchaKey="6Lc2qS4oAAAAACIcdUjUVeeviZGRFaLVvN_aIUL1">
           <Link
             className="group flex max-w-fit items-center justify-center space-x-2 rounded-full border border-red bg-red px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-red"
             href="/chat"
@@ -54,6 +56,7 @@ export default async function Home() {
                   />
               </svg>
           </Link>
+          </ReCaptchaProvider>
         </div>
       {/* terms  */}
       <div>
@@ -67,7 +70,7 @@ export default async function Home() {
             <p className="md:text-xsm">Please note that while you chat with us you must remain on the app. If you navigate away from the chat window your connection may be lost.</p>
         </div>  */}
       </div>
-      </ReCaptchaProvider>
+      <Footer/>
     </>
   );
 }

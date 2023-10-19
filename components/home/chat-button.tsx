@@ -1,12 +1,14 @@
-import {Button} from '@twilio-paste/button';
-import { ProductChatIcon } from "@twilio-paste/icons/esm/ProductChatIcon";
+import { Button } from "@twilio-paste/button";
+import Link from "next/link";
+import { Letschat } from "../shared/icons";
 
-const LetsChat = () => {
+export default function LetsChat() {
   return(
-  <Button variant="destructive" size="rounded_small">
+  <Link href='/chat' passHref>
+   <Button variant="destructive" size="rounded_small">
     Let&apos;s Chat
-    <ProductChatIcon decorative />
-  </Button>
+    <Letschat />
+   </Button>
+  </Link>
 );
 }
-export default LetsChat;

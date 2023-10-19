@@ -6,3 +6,4 @@ export { default as Github } from "./github";
 export { default as Twitter } from "./twitter";
 export { default as Google } from "./google";
 export { default as Info } from "./info";
+export { default as Letschat} from "./letschat";

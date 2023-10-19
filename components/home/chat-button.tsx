@@ -9,8 +9,10 @@ export default function LetsChat() {
   className="group flex max-w-fit items-center justify-center space-x-2 rounded-full border border-red bg-red px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-red"
   >
    <Button variant="destructive" size="rounded_small">
-    Let&apos;s Chat 
-    <Letschat />
+   <span className="space-x-2">
+          Let&apos;s Chat 
+          <Letschat />
+        </span>
    </Button>
   </Link>
 );

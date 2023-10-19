@@ -7,6 +7,7 @@ export default function LetsChatIcon({ className }: { className?: string }) {
       stroke-width="1.5" 
       stroke="currentColor" 
       className="w-5 h-5">
+      
 
         <path 
           stroke-linecap="round" 

@@ -11,6 +11,7 @@ import LetsChat from "@/components/home/chat-button";
 export default async function Home() {
   return (
     <>
+   <ReCaptchaProvider reCaptchaKey="6Lc2qS4oAAAAACIcdUjUVeeviZGRFaLVvN_aIUL1">
     {/* begin orig code */}
       <div className="z-10 w-full max-w-xl px-5 xl:px-0">
         <h3
@@ -34,9 +35,8 @@ export default async function Home() {
           style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
         >
            {/* adding recaptcha */}
-          <ReCaptchaProvider reCaptchaKey="6Lc2qS4oAAAAACIcdUjUVeeviZGRFaLVvN_aIUL1">
           <LetsChat />
-          </ReCaptchaProvider>
+          
         </div>
       {/* terms  */}
       <div>
@@ -44,13 +44,9 @@ export default async function Home() {
       </div>
        {/* navigation warning  */}
         <NavWarning />
-          {/* basecode for navwarning */}
-        {/* <div className="alert alert-info bg-indigo-500/50 mx-auto mt-6 flex animate-fade-up items-center justify-center space-x-5 ">
-           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="stroke-current shrink-0 w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <p className="md:text-xsm">Please note that while you chat with us you must remain on the app. If you navigate away from the chat window your connection may be lost.</p>
-        </div>  */}
       </div>
       <Footer/>
+  </ReCaptchaProvider>
     </>
   );
 }

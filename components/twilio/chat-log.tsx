@@ -82,8 +82,6 @@ export const CustomerChatLog: React.FC = () => {
   if (event.key === "Enter") {
     event.preventDefault();
     push(createNewMessage(message));
-// Clear the text input editor
-    setMessage("");
   }
 };
 
@@ -118,6 +116,7 @@ export const CustomerChatLog: React.FC = () => {
           ariaLabel="Message"
           placeholder="Type your message here..."
           onChange={handleComposerChange}
+          //handle enter key down
           onKeyDown={handleKeyDown}
         >
           <>

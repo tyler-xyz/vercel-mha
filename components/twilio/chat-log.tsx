@@ -77,6 +77,17 @@ export const CustomerChatLog: React.FC = () => {
     });
   };
 
+//const to handle on enterkey press
+  const handleKeyDown = (event: React.KeyboardEvent) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    push(createNewMessage(message));
+// Clear the text input editor
+    setMessage("");
+  }
+};
+
+
   return (
     <Box minHeight="size50" display="grid" gridTemplateRows="1fr auto">
       <Box overflowY="scroll" maxHeight="size50" tabIndex={0}>
@@ -107,6 +118,7 @@ export const CustomerChatLog: React.FC = () => {
           ariaLabel="Message"
           placeholder="Type your message here..."
           onChange={handleComposerChange}
+          onKeyDown={handleKeyDown}
         >
           <>
             {/* <AutoScrollPlugin scrollRef={scrollRef} /> */}

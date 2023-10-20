@@ -1,17 +1,14 @@
 import Card from "@/components/home/card";
 import Balancer from "react-wrap-balancer";
-import Image from "next/image";
-import Link from "next/link";
 import { ReCaptchaProvider } from "next-recaptcha-v3";
 import EulaButton from "@/components/home/terms-button";
 import NavWarning from "@/components/home/nav-warning";
-import { Box } from "@twilio-paste/box";
 import Footer from "@/components/layout/footer";
 import LetsChat from "@/components/home/chat-button";
 export default async function Home() {
   return (
     <>
-   <ReCaptchaProvider reCaptchaKey="6Lc2qS4oAAAAACIcdUjUVeeviZGRFaLVvN_aIUL1">
+  <ReCaptchaProvider reCaptchaKey="6Lc2qS4oAAAAACIcdUjUVeeviZGRFaLVvN_aIUL1">
     {/* begin orig code */}
       <div className="z-10 w-full max-w-xl px-5 xl:px-0">
         <h3
@@ -34,9 +31,7 @@ export default async function Home() {
           className="mx-auto mt-6 flex animate-fade-up items-center justify-center space-x-5 opacity-0"
           style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
         >
-           {/* adding recaptcha */}
           <LetsChat />
-          
         </div>
       {/* terms  */}
       <div>

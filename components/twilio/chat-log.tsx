@@ -11,11 +11,15 @@ import {
 } from "@twilio-paste/chat-log";
 import { ChatComposer } from "@twilio-paste/chat-composer";
 import { Box } from "@twilio-paste/box";
-import { $getRoot } from "@twilio-paste/lexical-library";
+import {
+  useLexicalComposerContext,
+  $getRoot
+} from "@twilio-paste/lexical-library";
 import { EditorState } from "@twilio-paste/lexical-library";
 import { SendButtonPlugin } from "./sendButtonPlugin";
 import { createNewMessage } from "./helpers";
 import NavWarning from "../home/nav-warning";
+import { createEmptyEditorState } from "lexical/LexicalEditorState";
 
 export const CustomerChatLog: React.FC = () => {
   const scrollRef = React.createRef<HTMLDivElement>();
@@ -78,14 +82,13 @@ export const CustomerChatLog: React.FC = () => {
   };
 
 //const to handle on enterkey press
-  const handleKeyDown = (event: React.KeyboardEvent) => {
-  if (event.key === "Enter") {
+const handleKeyDown = (event: React.KeyboardEvent) => {
+  if (event.key === "Enter" && "Return") {
 //prevent line return
     event.preventDefault();
-//send msg on enter key press
     push(createNewMessage(message));
-//reset text input
-    setMessage('');
+    setMessage("");
+
   }
 };
 

@@ -81,16 +81,16 @@ export const CustomerChatLog: React.FC = () => {
     });
   };
 
-//const to handle on enterkey press
-const handleKeyDown = (event: React.KeyboardEvent) => {
-  if (event.key === "Enter" && "Return") {
-//prevent line return
-    event.preventDefault();
-    push(createNewMessage(message));
-    setMessage("");
+// //const to handle on enterkey press
+// const handleKeyDown = (event: React.KeyboardEvent) => {
+//   if (event.key === "Enter" && "Return") {
+// //prevent line return
+//     event.preventDefault();
+//     push(createNewMessage(message));
+//     setMessage("");
 
-  }
-};
+//   }
+// };
 
 
   return (
@@ -124,7 +124,7 @@ const handleKeyDown = (event: React.KeyboardEvent) => {
           placeholder="Type your message here..."
           onChange={handleComposerChange}
           //handle enter key down
-          onKeyDown={handleKeyDown}
+          // onKeyDown={handleKeyDown}
         >
           <>
             {/* <AutoScrollPlugin scrollRef={scrollRef} /> */}

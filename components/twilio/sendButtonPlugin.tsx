@@ -14,8 +14,7 @@ export const SendButtonPlugin = ({ onClick = () => {}}): JSX.Element => {
   const handleSend = (): void => {
     onClick();
    
-    // editor.dispatchCommand(CLEAR_EDITOR_COMMAND, undefined);
-
+    // editor update clear root text input
     editor.update(() => {
       $getRoot().clear();
     });
@@ -23,17 +22,10 @@ export const SendButtonPlugin = ({ onClick = () => {}}): JSX.Element => {
 
   return (
     <Box position="absolute" top="space30" right="space30">
-      <Button variant="primary_icon" size="reset" onClick={handleSend}>
+      <Button variant="primary_icon" size="reset" 
+      onClick={handleSend}>
         <SendIcon decorative={false} title="Send message" />
       </Button>
-      {/* <input
-        type="text"
-        onKeyDown={(event) => {
-          if (event.key === 'Enter') {
-            handleSend();
-          }
-        }}
-        /> */}
     </Box>
   );
 };

@@ -80,8 +80,12 @@ export const CustomerChatLog: React.FC = () => {
 //const to handle on enterkey press
   const handleKeyDown = (event: React.KeyboardEvent) => {
   if (event.key === "Enter") {
+//prevent line return
     event.preventDefault();
+//send msg on enter key press
     push(createNewMessage(message));
+//reset text input
+    setMessage('');
   }
 };
 

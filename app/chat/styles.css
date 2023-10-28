@@ -1,4 +1,21 @@
 .paste-chat-composer-content-editable {
-    max-width: calc(100% - 20px);
-  }
-  
+  max-width: calc(100% - 20px);
+}
+
+.Twilio-RootContainer-default {
+  justify-content: center;
+}
+
+.Twilio-MainContainer {
+  max-width: 600px !important;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
+#twilio-customer-frame .Twilio-MainContainer {
+  position: unset !important;
+}
+
+#twilio-customer-frame .Twilio-Icon-Close {
+  display: none;
+}

@@ -139,4 +139,6 @@ Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {
 
     setTimeout(function () { $('.Twilio-EntryPoint').click(); }, 3000);
 
+
+
 });

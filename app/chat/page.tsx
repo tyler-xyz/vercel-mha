@@ -7,6 +7,7 @@ import { Suspense } from "react";
 import { App } from "@/components/twilio/app";
 import Head from "next/head";
 import Script from "next/script";
+import "./styles.css";
 /* this is the index page for the Chat Page */
 
 export default function Chat() {

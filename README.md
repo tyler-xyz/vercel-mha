@@ -1,7 +1,7 @@
 
-## MHA-CARES Version 0.8
+## MHA-CARES Version 0.9
 
-8th iteration of the CARES Chat Application
+9th iteration of the CARES Chat Application
 [vercel-mha.vercel.app](url)
 
 

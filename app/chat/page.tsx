@@ -7,7 +7,6 @@ import { Suspense } from "react";
 import { App } from "@/components/twilio/app";
 import Head from "next/head";
 import Script from "next/script";
-import "./styles.css";
 /* this is the index page for the Chat Page */
 
 export default function Chat() {
@@ -33,16 +32,16 @@ export default function Chat() {
   return (
     <>
       {/* box container for chatWindow demo */}
-      {/* <div className="z-10 w-full max-w-xl px-5 xl:px-2 h-screen p-2 border-2"> */}
+      <div className="z-10 w-full max-w-xl px-5 xl:px-2 h-screen p-2 border-2">
           <Script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossOrigin="anonymous"/>
           <Script src="https://assets.flex.twilio.com/releases/flex-webchat-ui/2.9.3/twilio-flex-webchat.min.js" integrity="sha512-lL9Ihx5WpKGmP1wzno3O9BMWAnKJDxfNfoE7/HnVfESbtBAzA6jUhAOU+b4Nq3WvZthSf7mOH3SNo7+zVP7BVQ==" crossOrigin=""/>
-          {/* <Theme.Provider theme='twilio'>
+          <Theme.Provider theme='twilio'>
           <Suspense fallback={<Loading />}>
             <App />
           </Suspense>
-          </Theme.Provider> */}
+          </Theme.Provider>
           {/* <Script src="./chat.js"/> */}
-      {/* </div> */}
+      </div>
     </>
   );
 }

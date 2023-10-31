@@ -105,8 +105,8 @@ const brandedColors = {
 
 var appConfig = {
     accountSid: "ACa3fc06fd70fef1a4fef034c857fdee2a",
-    flexFlowSid: "FW9a0a6efffde95c33be11853a095ad31c",
-    //flexFlowSid: "FO6c3f7c21446e5f46c216a7c9fa9d67bb",
+    //flexFlowSid: "FW9a0a6efffde95c33be11853a095ad31c",
+    flexFlowSid: "FO6c3f7c21446e5f46c216a7c9fa9d67bb",
     componentProps: {
         MessagingCanvas: {
             memberDisplayOptions: {

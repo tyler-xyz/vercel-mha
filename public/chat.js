@@ -126,7 +126,7 @@ var appConfig = {
 Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {
     const { manager } = webchat;
     console.log(manager);
-    Twilio.FlexWebChat.MessagingCanvas.defaultProps.predefinedMessage.body = "Hi, this is Crisis Text Line. Youâ€™re not alone. By texting further with us, you agree to our Terms: goo.gl/EMCKCY. Si hablas espaÃ±ol y quieres hablar con una persona voluntaria entrenada, envÃ­a la palabra ESPAÃ‘OL vÃ­a mensaje de texto ahora. Whatâ€™s your crisis?";
+    Twilio.FlexWebChat.MessagingCanvas.defaultProps.predefinedMessage.body = "Do you feel like you or someone you know are in crisis? (y/n)";
 	Twilio.FlexWebChat.MainHeader.defaultProps.titleText = ' ';
 	Twilio.FlexWebChat.MainHeader.defaultProps.showImage=false;
 	Twilio.FlexWebChat.MainHeader.defaultProps.imageUrl = "/favicon.ico";

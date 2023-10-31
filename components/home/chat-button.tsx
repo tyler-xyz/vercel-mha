@@ -4,6 +4,8 @@ import Link from "next/link";
 import { Letschat } from "../shared/icons";
 import { useCallback, useState } from "react";
 import { useReCaptcha } from "next-recaptcha-v3";
+
+//
 export default function LetsChat() {
   const { executeRecaptcha } = useReCaptcha();
   const [notification, setNotification] = useState<string>('');
@@ -52,11 +54,10 @@ export default function LetsChat() {
   <Link href='/chat' passHref
   className="group flex max-w-fit items-center justify-center space-x-2 rounded-full border border-red bg-red px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-red"
   >
-   <Button variant="destructive" size="rounded_small"
-      onClick={handleSumitForm}
-   >
     Let&apos;s Chat&nbsp; 
-    <Letschat />
+    
+   <Button variant="primary" size="default" onClick={handleSumitForm} >
+      <Letschat />
    </Button>
   </Link>
 );

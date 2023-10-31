@@ -6,7 +6,6 @@ import Loading from "@/components/home/loading-ui";
 import { Suspense } from "react";
 import { App } from "@/components/twilio/app";
 import Head from "next/head";
-import {useNavigate, useLocation} from "react-router-dom";
 import Script from "next/script";
 import "./styles.css";
 /* this is the index page for the Chat Page */

@@ -8,7 +8,7 @@
 
 .Twilio-MainContainer {
   max-width: 600px !important;
-  margin-bottom: 5px;
+  margin-bottom: 30px;
   margin-top: 20px;
 }
 
@@ -20,8 +20,8 @@
   display: none;
 }
 
-main.min-h-screen {
-  min-height: unset !important;
+#twilio-customer-frame {
+margin-top: -80vh;
 }
 
 .Twilio-MainHeader-default img{max-height: 28px!important;}

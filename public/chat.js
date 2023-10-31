@@ -5,8 +5,8 @@
 
 //  color theme 
 
-const brandColor1 = "#1976d2";
-const brandColor2 = "#233659";
+const brandColorTwilio1 = "#1976d2";
+const brandColorTwilio2 = "#233659";
 const brandTextColor = "#ffffff";
 
 
@@ -44,13 +44,13 @@ const brandMessageBubbleColors = (bgColor) => ({
 const brandedColors = {
     Chat: {
         MessageListItem: {
-            FromOthers: brandMessageBubbleColors(brandColor2),
-            FromMe: brandMessageBubbleColors(brandColor1),
+            FromOthers: brandMessageBubbleColors(brandColorTwilio2),
+            FromMe: brandMessageBubbleColors(brandColorTwilio1),
         },
         MessageInput: {
             Container: {
                 Button: {
-                    background: brandColor1,
+                    background: brandColorTwilio1,
                     color: brandTextColor
                 }
             }

@@ -127,7 +127,7 @@ var appConfig = {
 Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {
     const { manager } = webchat;
     console.log(manager);
-    Twilio.FlexWebChat.MessagingCanvas.defaultProps.predefinedMessage.body = "Do you feel like you or someone you know are in crisis? (y/n)";
+    Twilio.FlexWebChat.MessagingCanvas.defaultProps.predefinedMessage.body = "Do you feel like you, or someone you know are in crisis? (yes / no)";
 	Twilio.FlexWebChat.MainHeader.defaultProps.titleText = ' ';
 	Twilio.FlexWebChat.MainHeader.defaultProps.showImage=false;
 	Twilio.FlexWebChat.MainHeader.defaultProps.imageUrl = "/favicon.ico";

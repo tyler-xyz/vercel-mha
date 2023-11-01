@@ -17,23 +17,28 @@ const [isLoaded, setIsLoaded] = useState<boolean>(false);
 useEffect(() => {
 setIsLoaded(true);
 return () => {
-var tag1 = document.getElementById("twilio-script");
-var tag2 = document.getElementById("twilio-customer-frame");
-if(tag1){
-tag1.parentNode?.removeChild(tag1);
-tag2?.parentNode?.removeChild(tag2);
+let tag1 = document.getElementById("twilio-script");
+let tag2 = document.getElementById("twilio-customer-frame");
+if (tag2) {
+tag2.style.display = "none";
 }
 }
 }, []);
 
 useEffect(() => {
 if(isLoaded){
+let tag2 = document.getElementById("twilio-customer-frame");
+if(tag2) {
+tag2.style.display = "block";
+}
+else {
 setTimeout(() => {
 script = document.createElement("script");
 script.src = "./chat.js";
 script.id = "twilio-script"
 document.body.appendChild(script);
 }, 1000);
+}
 }
 }, [isLoaded]);
 return (

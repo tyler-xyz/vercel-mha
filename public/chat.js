@@ -156,6 +156,44 @@ Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {
     }
     setTimeout(function() { $('.chat-loader').hide(); }, 3000);
 
+// set time for session out - START
+    
+    var set_min=1;
+    var set_time=set_min*60;
+    var timeout=set_time+2;
+    
+    var i=0;
 
+    setInterval(function(){
+    
+       console.log("time start");
+       localStorage.setItem("time_count", i);
+       
+       var time_count=localStorage.getItem("time_count");
+       
+       if(time_count ==set_time){
+           
+           localStorage.setItem("time_count", timeout);
+           localStorage.clear();
+           alert("Your session has been ended due to inactivity");
+           location.reload();
+          
+       }
+        i++;
+       
+    },1000);
+    
+    
+    
+     $('*').bind('click mousedown keypress change scroll resize dblclick mousemove', function (event ) {
+
+      console.log("active");
+      i=0;
+      localStorage.setItem("time_count", i);
+                 
+                    
+    });
+
+// set time for session out - END
 
 });

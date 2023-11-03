@@ -146,6 +146,10 @@ Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {
     manager.strings.PredefinedChatMessageAuthorName = " ";
     webchat.init();
 
+    setTimeout(function() { 
+	    $(".Twilio-MessageInputArea-TextArea textarea").attr("placeholder", "Type your message here");    
+     }, 1000);
+
     const flex_data = localStorage.getItem("twilio-flex-cf");
     var get_data=JSON.parse(flex_data);
     var channelSid=get_data.flex.session.channelSid;
@@ -155,7 +159,6 @@ Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {
     
     }
     setTimeout(function() { 
-	    $(".Twilio-MessageInputArea-TextArea textarea").attr("placeholder", "Type your message here");
 	    $('.chat-loader').hide();	    
     }, 3000);
 

@@ -154,7 +154,10 @@ Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {
         setTimeout(function() { $('.Twilio-EntryPoint').click(); }, 3000);
     
     }
-    setTimeout(function() { $('.chat-loader').hide(); }, 3000);
+    setTimeout(function() { 
+	    $('.chat-loader').hide();
+	    $(".Twilio-MessageInputArea-TextArea textarea").attr("placeholder", "Type your message here");
+    }, 3000);
 
     //11/2/23 start re-deploy test
     // set time for session out - START

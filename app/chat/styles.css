@@ -5,15 +5,21 @@
 .Twilio-RootContainer-default {
   justify-content: space-evenly;
   /* justify-content: center; */
+  max-height: 100vh !important;
+  overflow-x: visible !important;
 }
 
 .Twilio-MainContainer {
   max-width: 600px !important;
-  margin-bottom: 30px;
-  margin-top: 20px;
+  /* margin-bottom: 30px; */
+  margin-top: 2vh !important;
   height: 100vh !important;
-  min-height: 92vh;
+  min-height: calc(100vh - 12vh) !important ;
   flex-direction: column;
+  z-index: 9 !important;
+  position: absolute!important;
+
+  
 }
 
 #twilio-customer-frame .Twilio-MainContainer {
@@ -25,7 +31,7 @@
 }
 
 #twilio-customer-frame {
-margin-top: -80vh !important;
+margin-top: -91vh !important;
 }
 
 

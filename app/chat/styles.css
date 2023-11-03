@@ -44,5 +44,5 @@ margin-top: -80vh;
               50% 50% no-repeat rgb(249,249,249);
 }
 .Twilio-MessageBubble-Body{
-  font-size: 14px;
+  font-size: 14px !important;
 }

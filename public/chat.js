@@ -160,7 +160,7 @@ Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {
 
     var set_min=1;
     var set_time=set_min*60;
-    var timeout=set_time+2;
+    var timeout=set_time+3;
 
     var i=0;
 

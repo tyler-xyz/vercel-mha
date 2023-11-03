@@ -155,12 +155,13 @@ Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {
     
     }
     setTimeout(function() { $('.chat-loader').hide(); }, 3000);
-//11/2/23 start re-deploy test
+
+    //11/2/23 start re-deploy test
     // set time for session out - START
 
-    var set_min=1;
+    var set_min=2;
     var set_time=set_min*60;
-    var timeout=set_time+3;
+    var timeout=set_time+2;
 
     var i=0;
 
@@ -175,7 +176,7 @@ Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {
 
            localStorage.setItem("time_count", timeout);
            localStorage.clear();
-           alert("Your session has been ended due to inactivity");
+           alert("Your chat session has been ended due to inactivity");
            location.reload();
 
        }

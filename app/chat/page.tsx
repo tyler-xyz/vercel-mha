@@ -1,11 +1,6 @@
 "use client";
-import Image from "next/image";
+
 import React, { useEffect, useState } from "react";
-import { Theme } from "@twilio-paste/core/dist/theme";
-import Loading from "@/components/home/loading-ui";
-import { Suspense } from "react";
-import { App } from "@/components/twilio/app";
-import Head from "next/head";
 import Script from "next/script";
 import "./styles.css";
 /* this is the index page for the Chat Page */

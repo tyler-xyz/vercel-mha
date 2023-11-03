@@ -142,7 +142,7 @@ Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {
             .then(channel => channel.sendMessage(question));
     });
 
-    manager.strings.WelcomeMessage = "Welcome to the Chat";
+    manager.strings.WelcomeMessage = "Welcome to JustTellOne.org's Chat";
     manager.strings.PredefinedChatMessageAuthorName = " ";
     webchat.init();
 

@@ -53,3 +53,7 @@ margin-top: -80vh !important;
 .Twilio-MessageInputArea-TextArea::placeholder {
   content: "Type your message here" !important;
 }
+/* for iPhone message input */
+.Twilio-MessageInputArea-TextArea textarea {
+  font-size: 1rem !important;
+}

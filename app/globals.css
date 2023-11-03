@@ -74,3 +74,23 @@ ol.nested  {
 .mb-6 {
   margin-bottom: 1.5em;
 }
+
+/* change header and footer - no overlap - START */
+.nav-top-mha {
+    background-color: white!important;
+}
+
+.grecaptcha-badge {
+   z-index: 99999;
+}
+
+.footer-mha {
+    z-index: 10;
+	background-color: rgb(70 45 145)!important;
+	position: fixed!important;
+}
+
+body {
+    margin-bottom:5rem;
+}
+/* change header and footer - no overlap - END */

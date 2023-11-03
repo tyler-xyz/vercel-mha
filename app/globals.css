@@ -81,7 +81,7 @@ ol.nested  {
 }
 
 .grecaptcha-badge {
-   z-index: 99999;
+   z-index: 20;
 }
 
 .footer-mha {

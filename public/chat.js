@@ -202,5 +202,21 @@ Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {
     });
 
 // set time for session out - END
+// 12/14/23 code for user closing browser tab - Begin
+// Utilize browser events for session closure
+window.addEventListener('beforeunload', function(event) {
+    // Optionally, send a request to your server to mark the session as closed
+    // fetch('https://your-server/api/chat/close', {
+    //   method: 'POST',
+    //   body: JSON.stringify({ channelSid: localStorage.getItem('channelSid') }),
+    // });
+  
+    // Clear local storage to remove any remaining chat session data
+    localStorage.clear();
+  
+    // Prevent default page unload behavior (optional)
+    // event.preventDefault();
+  });
+// 12/14/23 code for user closing browser tab - End
 
 });

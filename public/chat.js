@@ -4,11 +4,9 @@
     document.body.appendChild(div_chat_loader);
 
 //  color theme 
-
 const brandColorTwilio1 = "#009DDC";
 const brandColorTwilio2 = "#2B3440";
 const brandTextColor = "#ffffff";
-
 
 const personalizedColors = {
     darkBlueBackground: "#62677c",
@@ -101,11 +99,8 @@ const brandedColors = {
 };
 
 // color theme 
-
-
 var appConfig = {
     accountSid: "ACa3fc06fd70fef1a4fef034c857fdee2a",
-    //flexFlowSid: "FW9a0a6efffde95c33be11853a095ad31c",
     flexFlowSid: "FO6c3f7c21446e5f46c216a7c9fa9d67bb",
     componentProps: {
         MessagingCanvas: {
@@ -122,7 +117,6 @@ var appConfig = {
         overrides: brandedColors
     },
 };
-
 
 Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {
     const { manager } = webchat;
@@ -162,9 +156,7 @@ Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {
 	    $('.chat-loader').hide();	    
     }, 3000);
 
-    //11/2/23 start re-deploy test
     // set time for session out - START
-
     var set_min=2;
     var set_time=set_min*60;
     var timeout=set_time+2;

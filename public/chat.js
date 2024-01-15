@@ -108,7 +108,7 @@ var appConfig = {
         MessagingCanvas: {
             memberDisplayOptions: {
                 yourDefaultName: 'You',
-                theirDefaultName: ' ',
+                theirDefaultName: 'YPA',
                 yourFriendlyNameOverride: true,
                 theirFriendlyNameOverride: false
             }

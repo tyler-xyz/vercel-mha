@@ -10,7 +10,7 @@ export default function Footer() {
         Need Additional Help?{" "}
         <a
           className="font-low text-white underline transition-colors inline-flex"
-          href="https://justtellone.org/about/"
+          href="https://mhawny.org/jt1/about/"
           target="_self"
           rel="noopener noreferrer"
         >

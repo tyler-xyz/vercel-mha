@@ -101,6 +101,7 @@ const brandedColors = {
 // color theme 
 var appConfig = {
     accountSid: "ACa3fc06fd70fef1a4fef034c857fdee2a",
+	//new acount sid below - JT1 Chat Line
     flexFlowSid: "FO6c3f7c21446e5f46c216a7c9fa9d67bb",
     //new account flex flow below - JT1 Chat Line
     //flexFlowSid: "FO59479fcca707f6160055e8e0c8badc0b",
@@ -143,7 +144,7 @@ Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {
     webchat.init();
 
     setTimeout(function() { 
-	    $(".Twilio-MessageInputArea-TextArea textarea").attr("placeholder", "Type your message here");    
+	    $(".Twilio-MessageInputArea-TextArea textarea").attr("placeholder", "Please type your message here");    
      }, 1000);
 
     const flex_data = localStorage.getItem("twilio-flex-cf");

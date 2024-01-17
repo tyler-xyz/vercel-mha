@@ -26,7 +26,7 @@ const services = { /* Conversation services properties */ } as any;
 
 const AccessToken = twilio.jwt.AccessToken;
 const ChatGrant = AccessToken.ChatGrant;
-const identity = 'anonymous';
+const identity = 'test';
 const client = twilio(accountSid, authToken);
 const conversations = new Conversation(descriptor, sid, links, configuration, services);
 

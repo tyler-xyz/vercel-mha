@@ -143,7 +143,7 @@ Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {
     });
 
     manager.strings.WelcomeMessage = "Welcome to JustTellOne.org's Chat";
-    manager.strings.PredefinedChatMessageAuthorName = " ";
+    manager.strings.PredefinedChatMessageAuthorName = "YPA";
     webchat.init();
 
     setTimeout(function() { 

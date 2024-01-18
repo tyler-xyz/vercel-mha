@@ -1,4 +1,4 @@
-// Add this line at the beginning of your file
+// use randomName to assign context
 import randomName from 'random-name';
 
 //  create div for loader 
@@ -119,7 +119,7 @@ var appConfig = {
         },
     },
     context: {
-        friendlyName: "${name}",
+        friendlyName: '${name}',
     },
     startEngagementOnInit: true,
     colorTheme: {

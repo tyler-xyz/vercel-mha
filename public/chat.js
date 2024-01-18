@@ -1,6 +1,5 @@
 // Add this line at the beginning of your file
 import randomName from 'random-name';
-const name = randomName.first();
 
 //  create div for loader 
     var div_chat_loader = document.createElement("div");
@@ -101,6 +100,7 @@ const brandedColors = {
         }
     }
 };
+const name = randomName.first();
 var appConfig = {
     accountSid: "ACa3fc06fd70fef1a4fef034c857fdee2a",
 		//new acountSid below - JT1 Chat Line

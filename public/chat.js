@@ -116,7 +116,7 @@ var appConfig = {
         },
     },
     context: {
-        friendlyName: "{randomName}"
+        friendlyName: randomName
     },
     startEngagementOnInit: true,
     colorTheme: {

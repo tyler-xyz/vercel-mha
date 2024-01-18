@@ -144,7 +144,7 @@ Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {
     webchat.init();
 
     setTimeout(function() { 
-	    $(".Twilio-MessageInputArea-TextArea textarea").attr("placeholder", "Please type your message here");    
+	    $(".Twilio-MessageInputArea-TextArea textarea").attr("placeholder", "Type your message here");    
      }, 1000);
 
     const flex_data = localStorage.getItem("twilio-flex-cf");

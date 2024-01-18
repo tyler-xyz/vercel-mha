@@ -1,5 +1,3 @@
-// use randomName to assign context
-import randomName from 'random-name';
 
 //  create div for loader 
     var div_chat_loader = document.createElement("div");
@@ -100,7 +98,7 @@ const brandedColors = {
         }
     }
 };
-const name = randomName.first();
+const randomName = "User" + Math.floor(Math.random() * 1000);
 var appConfig = {
     accountSid: "ACa3fc06fd70fef1a4fef034c857fdee2a",
 		//new acountSid below - JT1 Chat Line
@@ -119,7 +117,7 @@ var appConfig = {
         },
     },
     context: {
-        friendlyName: '${name}',
+        friendlyName: randomName,
     },
     startEngagementOnInit: true,
     colorTheme: {

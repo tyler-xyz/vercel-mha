@@ -97,7 +97,6 @@ const brandedColors = {
         }
     }
 };
-const randomName = require('random-name').generate();
 var appConfig = {
     accountSid: "ACa3fc06fd70fef1a4fef034c857fdee2a",
 		//new acountSid below - JT1 Chat Line
@@ -116,7 +115,7 @@ var appConfig = {
         },
     },
     context: {
-        friendlyName: randomName
+        friendlyName: "Dave"
     },
     startEngagementOnInit: true,
     colorTheme: {

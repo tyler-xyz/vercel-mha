@@ -109,7 +109,7 @@ var appConfig = {
     componentProps: {
         MessagingCanvas: {
             memberDisplayOptions: {
-                yourDefaultName: 'You',
+                yourDefaultName: 'Anonymous',
                 theirDefaultName: 'YPA',
                 yourFriendlyNameOverride: false,
                 theirFriendlyNameOverride: false

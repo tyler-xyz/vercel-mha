@@ -111,7 +111,7 @@ var appConfig = {
             memberDisplayOptions: {
                 yourDefaultName: 'You',
                 theirDefaultName: 'YPA',
-                yourFriendlyNameOverride: true,
+                yourFriendlyNameOverride: false,
                 theirFriendlyNameOverride: false
             }
         },

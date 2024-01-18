@@ -1,3 +1,7 @@
+// Add this line at the beginning of your file
+import randomName from 'random-name';
+const name = randomName.first();
+
 //  create div for loader 
     var div_chat_loader = document.createElement("div");
     div_chat_loader.setAttribute('class', 'chat-loader');
@@ -115,7 +119,7 @@ var appConfig = {
         },
     },
     context: {
-        friendlyName: "Dave"
+        friendlyName: name,
     },
     startEngagementOnInit: true,
     colorTheme: {

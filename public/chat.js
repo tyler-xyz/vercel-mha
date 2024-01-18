@@ -98,7 +98,6 @@ const brandedColors = {
     }
 };
 
-// color theme 
 var appConfig = {
     accountSid: "ACa3fc06fd70fef1a4fef034c857fdee2a",
 		//new acountSid below - JT1 Chat Line
@@ -115,6 +114,9 @@ var appConfig = {
                 theirFriendlyNameOverride: false
             }
         },
+    },
+    context: {
+        friendlyName: "Dave"
     },
     startEngagementOnInit: true,
     colorTheme: {

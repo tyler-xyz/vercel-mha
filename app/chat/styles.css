@@ -65,7 +65,7 @@ margin-top: -91vh !important;
 }
 /* change the default avatar */
 .Twilio-Icon-DefaultAvatar  {
-  content: url(../favicon.ico); /* Adjust path if needed */
+  content: url(../Favicon24.png); /* Adjust path if needed */
   /* Additional styles for size and positioning (optional) */
   width: 24px; /* Adjust width as needed */
   height: 24px; /* Adjust height as needed */

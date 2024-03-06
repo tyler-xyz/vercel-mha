@@ -32,8 +32,8 @@ const brandMessageBubbleColors = (bgColor) => ({
         color: brandTextColor
     },
     Avatar: {
-        imageUrl: "/favicon.ico",
-        background: bgColor,
+        imageUrl: '/favicon.ico',
+        //background: bgColor,
         color: brandTextColor
     },
     Header: {

@@ -15,7 +15,7 @@ export default async function Home() {
           className="animate-fade-up bg-gradient-to-br from-stone-500 to-white bg-clip-text text-center font-display text-3xl font-bold tracking-[-0.02em] text-white opacity-0 drop-shadow-sm md:text-7xl md:leading-[5rem]"
           style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}
         >
-          <Balancer>Be Heard.</Balancer>
+          <Balancer>Be Heard.</Balancer><br></br>
           <Balancer>Be Helped.</Balancer>
         </h3>
         {/* second paragraph start */}

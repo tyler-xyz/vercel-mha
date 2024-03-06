@@ -5,7 +5,7 @@
     document.body.appendChild(div_chat_loader);
 
 //  color theme 
-const brandColorTwilio1 = "#009DDC";
+const brandColorTwilio1 = "#244C5A";
 const brandColorTwilio2 = "#2B3440";
 const brandTextColor = "#ffffff";
 

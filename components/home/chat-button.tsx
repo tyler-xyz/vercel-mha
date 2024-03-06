@@ -52,13 +52,14 @@ export default function LetsChat() {
 
   return(
   <Link href='/chat' passHref
-  className="group flex max-w-fit items-center justify-center space-x-2 rounded-full border border-red bg-red px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-red"
+  className="group flex max-w-fit items-center justify-center space-x-2 rounded-full border border-cyan bg-cyan px-5 py-2 text-sm text-white transition-colors hover:bg-white hover:text-cyan"
   >
     Let&apos;s Chat&nbsp; 
-    
+ {/*   
    <Button variant="primary" size="default" onClick={handleSumitForm} >
       <Letschat />
    </Button>
+*/}
   </Link>
 );
 }

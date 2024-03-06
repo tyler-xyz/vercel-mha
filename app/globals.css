@@ -9,22 +9,31 @@
     --tw-bg-opacity: 1;
     background-color: rgb(210 34 42 / var(--tw-bg-opacity));
   }
-.bg-purple {
+.bg-blue {
     --tw-bg-opacity: 1;
     background-color: rgb(36 76 90 / var(--tw-bg-opacity));
+  }
+.bg-cyan {
+    --tw-bg-opacity: 1;
+    background-color: rgb(100 186 180 / var(--tw-bg-opacity));
   }
 /*create text-red for hover*/
 .text-red {
     --tw-text-opacity: 1;
     color: rgb(210 34 42 / var(--tw-text-opacity));
   }
+/* create text-cyan*/
+.text-cyan {
+  --tw-text-opacity: 1;
+  color: rgb(100 186 180 / var(--tw-text-opacity));
+}
 /* create hover red border*/
 @media (hover: hover) and (pointer: fine) {
 
-    .hover\:text-red:hover {
+    .hover\:text-cyan:hover {
         --tw-text-opacity: 1;
-        color: rgb(210 34 42 / var(--tw-text-opacity));
-        border-color: rgb(210 34 42 / var(--tw-text-opacity));
+        color: rgb(100 186 180 / var(--tw-text-opacity));
+        border-color: rgb(100 186 180 / var(--tw-text-opacity));
       }
 }
 /*create extra small text xsm*/
@@ -85,7 +94,7 @@ ol.nested  {
 
 .footer-mha {
     z-index: 10;
-	background-color: rgb(70 45 145)!important;
+	background-color: rgb(36 76 90)!important;
 	position: fixed!important;
 }
 

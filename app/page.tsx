@@ -40,7 +40,7 @@ export default async function Home() {
           style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
         >
           <Balancer>
-          Monday through Friday
+          <strong>Monday through Friday</strong>
           </Balancer>
           <br></br>
           <Balancer>

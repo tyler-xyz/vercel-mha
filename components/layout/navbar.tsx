@@ -26,8 +26,8 @@ export default function NavBar({ session }: { session: Session | null }) {
             <Image
               src="/logo.png"
               alt="JustTellOne logo"
-              width="77"
-              height="60"
+              width="90"
+              height="70"
               className="mr-2 rounded-sm"
             >
             </Image>

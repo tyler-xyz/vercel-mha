@@ -35,20 +35,18 @@ export default async function Home() {
           <LetsChat />
         </div>
       {/* terms  */}
-      <div>
+       <div>
         <EulaButton />
-      </div>
+       </div>
        {/* navigation warning  */}
         {/*<NavWarning />*/}
-      <div
+       <div
           className="mx-auto mt-6 flex animate-fade-up items-center justify-center space-x-5 opacity-0"
           style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="stroke-white shrink-0 w-4 h-4"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-        <p className="md:text-xxsm text-white">Please note that while you chat with us you must remain on the app.</p>        
-        <p className="md:text-xxsm text-white">If you navigate away from the chat window your connection may be lost.</p>        
-
-      </div>
+        <p className="md:text-xxsm text-white">Please note that while you chat with us you must remain on the app. If you navigate away from the chat window your connection may be lost.</p>        
+       </div>
       </div>
       <Footer/>
   </ReCaptchaProvider>

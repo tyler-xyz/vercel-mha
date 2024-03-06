@@ -16,7 +16,7 @@ export default function EulaButton() {
       className="mx-auto mt-6 mb-6 animate-fade-up text-center text-white opacity-0 md:text-sm inline-flex"
       style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
     >
-        By continuing, you accept our&nbsp;
+        By continuing, you accept our {" "};
     </p>
     <p className= "mt-6 mb-6 animate-fade-up text-blue opacity-0 md:text-sm inline-flex underline"
           style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}>

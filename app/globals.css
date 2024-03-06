@@ -4,10 +4,10 @@
 
 /* Start re-enter of CSS Styling from 9/12*/
 
-/* create background colors red and purple*/
+/* create background colors red blue cyan*/
 .bg-red {
     --tw-bg-opacity: 1;
-    background-color: rgb(210 34 42 / var(--tw-bg-opacity));
+    background-color: rgb(238 56 39 / var(--tw-bg-opacity));
   }
 .bg-blue {
     --tw-bg-opacity: 1;

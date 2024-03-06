@@ -29,7 +29,7 @@ export default async function RootLayout({
         <Script src="https://assets.flex.twilio.com/releases/flex-webchat-ui/2.9.3/twilio-flex-webchat.min.js" integrity="sha512-lL9Ihx5WpKGmP1wzno3O9BMWAnKJDxfNfoE7/HnVfESbtBAzA6jUhAOU+b4Nq3WvZthSf7mOH3SNo7+zVP7BVQ==" crossOrigin=""/>
 
        {/* background listed div: orig code:bg-gradient-to-br from-indigo-50 via-white to-cyan-100 */}
-        <div className="fixed h-screen w-full bg-white" />
+        <div className="fixed h-screen w-full bg-red" />
         <Suspense fallback={<Loading />}>
           {/* @ts-expect-error Server Component */}
           <Nav />

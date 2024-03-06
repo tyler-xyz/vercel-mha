@@ -32,7 +32,7 @@ const brandMessageBubbleColors = (bgColor) => ({
         color: brandTextColor
     },
     Avatar: {
-        background: bgColor,
+        background: brandTextColor,
         color: brandTextColor
     },
     Header: {

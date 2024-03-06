@@ -10,7 +10,7 @@ const brandColorTwilio2 = "#2B3440";
 const brandTextColor = "#ffffff";
 
 const personalizedColors = {
-    darkBlueBackground: "#62677c",
+    darkBlueBackground: "#244C5A",
     whiteText: "#FFFFFF",
     entryPointBackground: "#3C425C",
     lighterBackground: "#ecedf1",

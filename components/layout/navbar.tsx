@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import useScroll from "@/lib/hooks/use-scroll";
 import { useSignInModal } from "./sign-in-modal";
-import UserDropdown from "./user-dropdown";
 import { Session } from "next-auth";
 
 export default function NavBar({ session }: { session: Session | null }) {
@@ -13,7 +12,7 @@ export default function NavBar({ session }: { session: Session | null }) {
 
   return (
     <>
-      <SignInModal />
+    {/*  <SignInModal />*/}
       <div
         className={`fixed nav-top-mha top-0 w-full flex justify-center border-b border-gray-200 ${
           scrolled
@@ -31,7 +30,6 @@ export default function NavBar({ session }: { session: Session | null }) {
               className="mr-2 rounded-sm"
             >
             </Image>
-            {/* <p>Precedent</p> */}
           </Link>
           <div>
           </div>

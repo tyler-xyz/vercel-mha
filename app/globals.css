@@ -4,7 +4,6 @@
 
 /* Start re-enter of CSS Styling from 9/12*/
 
-
 /* create background colors red and purple*/
 .bg-red {
     --tw-bg-opacity: 1;
@@ -12,7 +11,7 @@
   }
 .bg-purple {
     --tw-bg-opacity: 1;
-    background-color: rgb(70 45 145 / var(--tw-bg-opacity));
+    background-color: rgb(36 76 90 / var(--tw-bg-opacity));
   }
 /*create text-red for hover*/
 .text-red {

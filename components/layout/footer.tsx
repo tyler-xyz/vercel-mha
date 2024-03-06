@@ -1,6 +1,6 @@
 const styles = {
   footer: {
-    backgroundColor: "#462d91",
+    backgroundColor: "#244C5A",
   },
 };
 export default function Footer() {

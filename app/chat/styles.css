@@ -63,3 +63,12 @@ margin-top: -91vh !important;
 .Twilio-MessageInputArea-TextArea textarea {
   font-size: 1rem !important;
 }
+/* change the default avatar */
+.Twilio-Icon-DefaultAvatar  {
+  background-image: url(../favicon.ico); /* Adjust path if needed */
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* Additional styles for size and positioning (optional) */
+  width: 24px; /* Adjust width as needed */
+  height: 24px; /* Adjust height as needed */
+}

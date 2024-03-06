@@ -24,7 +24,7 @@ export default function EulaButton() {
      variant="link" 
      onClick={() => setShowDemoModal(true)}
     >
-    Terms&nbsp; 
+    Terms {" "}
     <p>
      <svg 
             xmlns="http://www.w3.org/2000/svg" 

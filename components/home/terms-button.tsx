@@ -26,7 +26,6 @@ export default function EulaButton() {
     >
     Terms 
     <p>
-    &nbsp;
      <svg 
             xmlns="http://www.w3.org/2000/svg" 
             fill="none" 

@@ -16,7 +16,7 @@ export default function EulaButton() {
       className="mx-auto mt-6 mb-6 animate-fade-up text-center text-blue opacity-0 md:text-sm inline-flex"
       style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
     >
-        By continuing, you accept our  <span></span>
+        By continuing, you accept our &nbsp
     </p>
     <p className= "mt-6 mb-6 animate-fade-up text-blue opacity-0 md:text-sm inline-flex underline"
           style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}>
@@ -24,7 +24,7 @@ export default function EulaButton() {
      variant="link" 
      onClick={() => setShowDemoModal(true)}
     >
-    Terms  <span></span>
+    Terms &nbsp&nbsp
     <p>
      <svg 
             xmlns="http://www.w3.org/2000/svg" 

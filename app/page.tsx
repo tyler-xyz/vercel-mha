@@ -34,6 +34,19 @@ export default async function Home() {
         >
           <LetsChat />
         </div>
+        {/* Third paragraph start */}
+        <p
+          className="mt-6 animate-fade-up text-center text-white opacity-0 md:text-xl"
+          style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
+        >
+          <Balancer>
+          Monday through Friday
+          </Balancer>
+          <br></br>
+          <Balancer>
+          from 2pm to 8pm EST
+          </Balancer>
+        </p>
       {/* terms  */}
        <div>
         <EulaButton />

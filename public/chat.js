@@ -131,7 +131,7 @@ Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {
     Twilio.FlexWebChat.MessagingCanvas.defaultProps.predefinedMessage.body = "Do you feel like you, or someone you know are in crisis? (Yes / No)";
 	Twilio.FlexWebChat.MainHeader.defaultProps.titleText = "Private Chat with a Youth Peer Advocate";
 	Twilio.FlexWebChat.MainHeader.defaultProps.showImage=true;
-	Twilio.FlexWebChat.MainHeader.defaultProps.imageUrl = "/Favicon28.ico";
+	Twilio.FlexWebChat.MainHeader.defaultProps.imageUrl = "/favicon.ico";
     Twilio.FlexWebChat.Actions.on("afterStartEngagement", (payload) => {
         const { question } = payload.formData;
         if (!question)

@@ -27,6 +27,11 @@
   --tw-text-opacity: 1;
   color: rgb(100 186 180 / var(--tw-text-opacity));
 }
+/* create text-cyan*/
+.text-blue {
+  --tw-text-opacity: 1;
+  color: rgb(36 76 90 / var(--tw-text-opacity));
+}
 /* create hover red border*/
 @media (hover: hover) and (pointer: fine) {
 

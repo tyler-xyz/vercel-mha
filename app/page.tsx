@@ -12,7 +12,7 @@ export default async function Home() {
     {/* begin orig code */}
       <div className="z-10 w-full max-w-xl px-5 xl:px-0">
         <h3
-          className="animate-fade-up bg-gradient-to-br from-stone-500 to-white bg-clip-text text-center font-display text-3xl font-bold tracking-[-0.02em] text-transparent opacity-0 drop-shadow-sm md:text-7xl md:leading-[5rem]"
+          className="animate-fade-up bg-gradient-to-br from-stone-500 to-white bg-clip-text text-center font-display text-3xl font-bold tracking-[-0.02em] text-white opacity-0 drop-shadow-sm md:text-7xl md:leading-[5rem]"
           style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}
         >
           <Balancer>Be Heard.</Balancer>

@@ -1,14 +1,11 @@
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/react";
 import cx from "classnames";
 import { montserrat, inter } from "./fonts";
 import Nav from "@/components/layout/nav";
-import Footer from "@/components/layout/footer";
 import { Suspense } from "react";
 import Loading from "@/components/home/loading-ui";
 import Head from "next/head";
 import Script from "next/script";
-
 export const metadata = {
   title: "Chat with a Youth Peer Advocate",
   description:

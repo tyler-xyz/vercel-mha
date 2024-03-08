@@ -39,7 +39,7 @@ margin-top: -91vh !important;
   max-height: 28px!important;
 }
 .Twilio-MainHeader-default {
-  font-family: Montserrat !important;
+  font-family: var(--font-mont) !important;
 }
 
 .Twilio-EntryPoint
@@ -60,16 +60,16 @@ margin-top: -91vh !important;
 }
 .Twilio-MessageBubble-Body{
   font-size: 14px !important;
-  font-family: Montserrat !important;
+  font-family: var(--font-mont) !important;
 }
 .Twilio-MessageInputArea-TextArea::placeholder {
   content: "Type your message here" !important;
-  font-family: Montserrat !important;
+  font-family: var(--font-mont) !important;
 }
 /* for iPhone message input */
 .Twilio-MessageInputArea-TextArea textarea {
   font-size: 1rem !important;
-  font-family: Montserrat !important;
+  font-family: var(--font-mont) !important;
 }
 /* change the default avatar */
 .Twilio-Icon-DefaultAvatar  {

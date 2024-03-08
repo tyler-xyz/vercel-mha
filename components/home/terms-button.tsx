@@ -18,7 +18,7 @@ export default function EulaButton() {
     >
         By continuing, you accept our&nbsp;
     </p>
-    <p className= "mt-6 mb-1 animate-fade-up text-blue opacity-0 md:text-xsm inline-flex underline"
+    <p className= "mt-6 mb-1 animate-fade-up text-blue opacity-0 md:text-xxsm inline-flex underline"
           style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}>
     <Button 
      variant="link" 

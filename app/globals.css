@@ -48,8 +48,8 @@
   }
 /*create extra small text xsm*/
 .text-xxsm {
-  font-size: 0.25rem;
-  line-height: 1.0rem;
+  font-size: 0.25rem!important;
+  line-height: 1.0rem!important; 
 }
 
 /*change spacing on EULA create new y-5 spacing*/

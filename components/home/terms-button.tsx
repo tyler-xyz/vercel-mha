@@ -13,7 +13,7 @@ export default function EulaButton() {
   <div className= "text-center w-full max-w-xl">
     <DemoModal />
     <p
-      className="mx-auto mt-6 mb-6 animate-fade-up text-center font-display text-blue opacity-0 md:text-xsm inline-flex"
+      className="mx-auto mt-6 mb-1 animate-fade-up text-center font-display text-blue opacity-0 md:text-xsm inline-flex"
       style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
     >
         By continuing, you accept our&nbsp;

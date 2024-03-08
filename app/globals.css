@@ -48,8 +48,8 @@
   }
 /*create extra small text xsm*/
 .text-xxsm {
-  font-size: 0.1rem;
-  line-height: 1;
+  font-size: 0.25rem;
+  line-height: 1.0rem;
 }
 
 /*change spacing on EULA create new y-5 spacing*/
@@ -84,7 +84,7 @@ ol.nested  {
   line-height: 1.5rem;
 }
 .font-low {
-  font-weight: 200;
+  font-weight: 300;
 }
 .mt-0 {
   margin-top: 0.0em;

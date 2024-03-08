@@ -48,6 +48,11 @@
   }
 /*create extra small text xxsm*/
 .text-xxsm {
+  font-size: 16px !important;
+  line-height: 1.0rem !important; 
+}
+/*create extra small text xxsm*/
+.text-xxxsm {
   font-size: 12px !important;
   line-height: 1.0rem !important; 
 }

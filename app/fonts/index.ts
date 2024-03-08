@@ -14,7 +14,7 @@ export const inter = Inter({
 // Define Montserrat font
 export const montserrat = Montserrat({
   subsets: ['latin'],
-  weight: [ '200','300', '400', '700'],
+  weight: [ '100', '200', '300', '400','500', '600', '700'],
 //  display: 'swap',
   variable: "--font-mont"
 });

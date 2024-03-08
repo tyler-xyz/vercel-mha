@@ -58,7 +58,7 @@ export default async function Home() {
           style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
       >
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="stroke-white shrink-0 w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-        <p className="md:text-xxsm font-display text-white">Please note that while you chat with us you must remain on the app.<br></br>If you navigate away from the chat window your connection may be lost.</p>        
+        <p className="font-display text-xxsm text-white">Please note that while you chat with us you must remain on the app.<br></br>If you navigate away from the chat window your connection may be lost.</p>        
        </div>
       </div>
       <Footer/>

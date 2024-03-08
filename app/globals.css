@@ -118,3 +118,8 @@ body {
     margin-bottom:5rem;
 }
 /* change header and footer - no overlap - END */
+
+/*change font for let's chat*/
+.lets-chat-bold {
+  font-weight: bold;
+}

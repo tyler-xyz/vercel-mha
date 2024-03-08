@@ -49,12 +49,14 @@
 /*create extra small text xxsm*/
 .text-xxsm {
   font-size: 16px !important;
-  line-height: 1.0rem !important; 
+  line-height: 1.0rem !important;
+  font-weight: 200 !important;
 }
 /*create extra small text xxsm*/
 .text-xxxsm {
   font-size: 13px !important;
   line-height: 1.0rem !important; 
+  font-weight: 200 !important;
 }
 
 /*change spacing on EULA create new y-5 spacing*/

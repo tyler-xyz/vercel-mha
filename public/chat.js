@@ -125,30 +125,6 @@ var appConfig = {
         overrides: brandedColors
     },
 };
-// 3/12/24 test
-Twilio.FlexWebChat.Actions.addListener("channelEnded", (payload, abortFunction) => {
-  const studioFlowTriggerUrl = "https://studio.twilio.com/v2/Flows/FW708dd9d5a2c49518cf226a08b5d8dd63/Executions";
-
-// Disable MessageCanvasTray elements using componentProps
-Twilio.FlexWebChat.MessagingCanvas.defaultProps = {
-  ...Twilio.FlexWebChat.MessagingCanvas.defaultProps,
-  componentProps: {
-    MessageCanvasTrayContent: {
-      display: "none",
-    },
-    MessageCanvasTrayButton: {
-      display: "none",
-    },
-  Twilio.FlexWebChat.Actions.invokeAction("Core.SendCustomEvent", {
-    name: "triggerStudioFlow",
-    data: {
-      url: studioFlowTriggerUrl,
-    },
-  });
-
-  abortFunction();
-});
-// end test
 
 //create webchat
 Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {

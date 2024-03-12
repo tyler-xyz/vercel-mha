@@ -106,6 +106,7 @@ var appConfig = {
     //flexFlowSid: "FO6c3f7c21446e5f46c216a7c9fa9d67bb",
     //new account flexflow below - JT1 Chat Line
     flexFlowSid: "FO59479fcca707f6160055e8e0c8badc0b",
+    authtoken: "d53c93f745be1cb7116d90dd5d3fdb58",
     componentProps: {
         MessagingCanvas: {
             memberDisplayOptions: {
@@ -125,7 +126,7 @@ var appConfig = {
     },
 };
 // 3/12/24 test
-Twilio.FlexWebChat.Actions.addListener("beforeEngagementEnd", (payload, abortFunction) => {
+Twilio.FlexWebChat.Actions.addListener("channelEnded", (payload, abortFunction) => {
   const studioFlowTriggerUrl = "https://studio.twilio.com/v2/Flows/FW708dd9d5a2c49518cf226a08b5d8dd63/Executions";
 
   Twilio.FlexWebChat.Actions.invokeAction("Core.SendTwilioEvent", {

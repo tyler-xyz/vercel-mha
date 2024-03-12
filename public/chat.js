@@ -126,18 +126,18 @@ var appConfig = {
     },
 };
 // 3/12/24 test
-Twilio.FlexWebChat.Actions.addListener("beforeEngagementEnd", (payload, abortFunction) => {
-  const studioFlowTriggerUrl = "https://studio.twilio.com/v2/Flows/FW708dd9d5a2c49518cf226a08b5d8dd63/Executions";
+//Twilio.FlexWebChat.Actions.addListener("beforeEngagementEnd", (payload, abortFunction) => {
+//  const studioFlowTriggerUrl = "https://studio.twilio.com/v2/Flows/FW708dd9d5a2c49518cf226a08b5d8dd63/Executions";
 
-  Twilio.FlexWebChat.Actions.invokeAction("Core.SendTwilioEvent", {
-    name: "triggerStudioFlow",
-    data: {
-      url: studioFlowTriggerUrl,
-    },
-  });
+ // Twilio.FlexWebChat.Actions.invokeAction("Core.SendTwilioEvent", {
+ //   name: "triggerStudioFlow",
+ //   data: {
+ //     url: studioFlowTriggerUrl,
+ //   },
+ // });
 
-  abortFunction();
-});
+ // abortFunction();
+// });
 // end test
 //create webchat
 Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {

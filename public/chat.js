@@ -106,7 +106,6 @@ var appConfig = {
     //flexFlowSid: "FO6c3f7c21446e5f46c216a7c9fa9d67bb",
     //new account flexflow below - JT1 Chat Line
     flexFlowSid: "FO59479fcca707f6160055e8e0c8badc0b",
-    authtoken: "d53c93f745be1cb7116d90dd5d3fdb58",
     componentProps: {
         MessagingCanvas: {
             memberDisplayOptions: {

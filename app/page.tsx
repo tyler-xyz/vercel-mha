@@ -1,8 +1,6 @@
-import Card from "@/components/home/card";
 import Balancer from "react-wrap-balancer";
 import { ReCaptchaProvider } from "next-recaptcha-v3";
 import EulaButton from "@/components/home/terms-button";
-import NavWarning from "@/components/home/nav-warning";
 import Footer from "@/components/layout/footer";
 import LetsChat from "@/components/home/chat-button";
 export default async function Home() {

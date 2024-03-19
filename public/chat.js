@@ -101,11 +101,15 @@ const brandedColors = {
 const randomName = "User" + Math.floor(Math.random() * 1000);
 var appConfig = {
     //accountSid: "ACa3fc06fd70fef1a4fef034c857fdee2a",
-		//new acountSid below - JT1 Chat Line
-    accountSid: "ACf74ee0b228033226bdea2f37a91390e7",
+	//new acountSid below - JT1 Chat Line
+    //accountSid: "ACf74ee0b228033226bdea2f37a91390e7",
+    //dev account sid
+    accountSid: "AC4df589039cc954d327e5a6b6f9acfd15",
     //flexFlowSid: "FO6c3f7c21446e5f46c216a7c9fa9d67bb",
     //new account flexflow below - JT1 Chat Line
-    flexFlowSid: "FO59479fcca707f6160055e8e0c8badc0b",
+    //flexFlowSid: "FO59479fcca707f6160055e8e0c8badc0b",
+    //dev flexflow below
+    flexFlowSid: "FOec7f1d52b5e3cf0bd79b1cf6277d9e77",
 
     componentProps: {
         MessagingCanvas: {

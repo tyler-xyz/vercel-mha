@@ -124,7 +124,7 @@ var appConfig = {
     context: {
         friendlyName: randomName,
     },
-    startEngagementOnInit: false,
+    startEngagementOnInit: true,
     colorTheme: {
         overrides: brandedColors
     },
@@ -147,8 +147,8 @@ Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {
 
         const { channelSid } = manager.store.getState().flex.session;
         manager
-            .chatClient.getChannelBySid(channelSid)
-            .then(channel => channel.sendMessage(question));
+            .chatClient.getChannelBySid(channelSid);
+            //.then(channel => channel.sendMessage(question));
     });
 
     manager.strings.WelcomeMessage = "Welcome to JustTellOne.org's Chat";

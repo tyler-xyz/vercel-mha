@@ -135,8 +135,8 @@ Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {
     const { manager } = webchat;
     console.log(manager);
    // Twilio.FlexWebChat.MessagingCanvas.defaultProps.predefinedMessage.body = "Do you feel like you, or someone you know are in crisis? (Yes / No)";
-    Twilio.FlexWebChat.MessagingCanvas.defaultProps.predefinedMessage.body = "It may take a moment to assign you a peer advocate. We appreciate your patience.";
-   // Twilio.FlexWebChat.MessagingCanvas.defaultProps.predefinedMessage.body = false;
+   // Twilio.FlexWebChat.MessagingCanvas.defaultProps.predefinedMessage.body = "It may take a moment to assign you a peer advocate. We appreciate your patience.";
+    Twilio.FlexWebChat.MessagingCanvas.defaultProps.predefinedMessage.body = false;
     Twilio.FlexWebChat.MainHeader.defaultProps.titleText = "Private Chat with a Youth Peer Advocate";
 	Twilio.FlexWebChat.MainHeader.defaultProps.showImage=true;
 	Twilio.FlexWebChat.MainHeader.defaultProps.imageUrl = "/favicon.ico";

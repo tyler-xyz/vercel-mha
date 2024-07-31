@@ -124,7 +124,7 @@ var appConfig = {
     context: {
         friendlyName: randomName,
     },
-    startEngagementOnInit: true,
+    startEngagementOnInit: false,
     colorTheme: {
         overrides: brandedColors
     },

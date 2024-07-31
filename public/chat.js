@@ -141,14 +141,14 @@ Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {
 	Twilio.FlexWebChat.MainHeader.defaultProps.showImage=true;
 	Twilio.FlexWebChat.MainHeader.defaultProps.imageUrl = "/favicon.ico";
     Twilio.FlexWebChat.Actions.on("afterStartEngagement", (payload) => {
-        //const { question } = payload.formData;
-        //if (!question)
-        //    return;
+        const { question } = payload.formData;
+        if (!question)
+            return;
 
         const { channelSid } = manager.store.getState().flex.session;
         manager
-            .chatClient.getChannelBySid(channelSid);
-            //.then(channel => channel.sendMessage(question));
+            .chatClient.getChannelBySid(channelSid)
+            .then(channel => channel.sendMessage(question));
     });
 
     manager.strings.WelcomeMessage = "Welcome to JustTellOne.org's Chat";

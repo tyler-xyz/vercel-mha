@@ -172,7 +172,9 @@ Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {
     }, 3000);
 
     // set time for session out - START
-    var set_min=2;
+    // set time changed to 5 (4) mins from 3 (2) mins -- 04/01/2025
+    //var set_min=2;
+    var set_min=4;
     var set_time=set_min*60;
     var timeout=set_time+2;
 

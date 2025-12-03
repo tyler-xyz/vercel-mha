@@ -52,7 +52,7 @@ export default function LetsChat() {
 
   return(
   <Link href='/chat' passHref
-  className="group flex max-w-fit items-center justify-center space-x-2 rounded-full border border-cyan bg-cyan px-5 py-2 text-sm text-white lets-chat-bold font-display transition-colors hover:bg-white hover:text-cyan"
+  className="group flex max-w-fit items-center justify-center space-x-2 rounded-full border border-cyan bg-blue px-5 py-2 text-sm text-white lets-chat-bold font-display transition-colors hover:bg-white hover:text-cyan"
   >
     Let&apos;s Chat&nbsp; 
  {/*   

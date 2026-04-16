@@ -3,6 +3,7 @@ const nextConfig = {
   styledComponents: true,
   reactStrictMode: true,
   swcMinify: true,
+  optimizeFonts: false, // Add this to stop the Font fetch crash
   images: {
     domains: ["lh3.googleusercontent.com", "vercel.com"],
   },

@@ -2,12 +2,11 @@
 
 import React, { useEffect, useState } from "react";
 import Script from "next/script";
-import "./styles.css";
+//import "./styles.css";
 /* this is the index page for the Chat Page */
 
 export default function Chat() {
 
-let script: any;
 const [isLoaded, setIsLoaded] = useState<boolean>(false);
 useEffect(() => {
 setIsLoaded(true);
@@ -21,6 +20,7 @@ tag2.style.display = "none";
 }, []);
 
 useEffect(() => {
+    let script = document.createElement("script"); // Inside with 'const'
 if(isLoaded){
 let tag2 = document.getElementById("twilio-customer-frame");
 if(tag2) {

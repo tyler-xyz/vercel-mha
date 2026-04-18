@@ -1,3 +1,4 @@
+/* stylelint-disable at-rule-no-unknown */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -133,4 +134,85 @@ body {
 /*change font for let's chat*/
 .lets-chat-bold {
   font-weight: bold;
+}
+/*4-18 migration of chat/styles.css to globals.css*/
+.paste-chat-composer-content-editable {
+  max-width: calc(100% - 20px);
+}
+
+.Twilio-RootContainer-default {
+  justify-content: space-evenly;
+  /* justify-content: center; */
+  max-height: 100vh !important;
+  overflow-x: visible !important;
+}
+
+.Twilio-MainContainer {
+  max-width: 600px !important;
+  /* margin-bottom: 30px; */
+  margin-top: 2vh !important;
+  height: 100vh !important;
+  min-height: calc(100vh - 12vh) !important ;
+  flex-direction: column;
+  z-index: 9 !important;
+  position: absolute!important;
+
+  
+}
+
+#twilio-customer-frame .Twilio-MainContainer {
+  position: unset !important;
+}
+
+#twilio-customer-frame .Twilio-Icon-Close {
+  display: none;
+}
+
+#twilio-customer-frame {
+margin-top: -91vh !important;
+}
+
+
+.Twilio-MainHeader-default img {
+  max-height: 28px!important;
+}
+.Twilio-MainHeader-default {
+  font-family: var(--font-mont) !important;
+}
+
+.Twilio-EntryPoint
+{
+    display:none!important;
+}
+
+
+.chat-loader{
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 21;
+  background: url('//upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Phi_fenomeni.gif/50px-Phi_fenomeni.gif') 
+              50% 50% no-repeat rgb(249,249,249);
+}
+.Twilio-MessageBubble-Body{
+  font-size: 14px !important;
+  font-family: var(--font-mont) !important;
+}
+.Twilio-MessageInputArea-TextArea::placeholder {
+  content: "Type your message here" !important;
+  font-family: var(--font-mont) !important;
+}
+/* for iPhone message input */
+.Twilio-MessageInputArea-TextArea textarea {
+  font-size: 1rem !important;
+  font-family: var(--font-mont) !important;
+}
+/* change the default avatar */
+.Twilio-Icon-DefaultAvatar  {
+  content: url(../Favicon24.png); /* Adjust path if needed */
+  /* Additional styles for size and positioning (optional) */
+  width: 24px; /* Adjust width as needed */
+  height: 24px; /* Adjust height as needed */
 }

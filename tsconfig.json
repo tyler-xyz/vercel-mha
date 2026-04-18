@@ -29,6 +29,6 @@
       }
     ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/api/session.ts", "components/twilio/client.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/api/session.ts", "components/twilio/client.js", "**/*.d.ts"],
   "exclude": ["node_modules"]
 }

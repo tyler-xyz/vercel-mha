@@ -5,6 +5,7 @@
     "allowJs": true,
     "skipLibCheck": true,
     "baseUrl": ".",
+    "ignoreDeprecations": "6.0",
     "paths": {
       "@/components/*": ["components/*"],
       "@/pages/*": ["pages/*"],

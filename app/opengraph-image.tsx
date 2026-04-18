@@ -6,10 +6,6 @@ export const alt = "Precedent - Building blocks for your Next.js project";
 export const contentType = "image/png";
 
 export default async function OG() {
-  const sfPro = await fetch(
-    new URL("./fonts/SF-Pro-Display-Medium.otf", import.meta.url),
-  ).then((res) => res.arrayBuffer());
-
   return new ImageResponse(
     (
       <div
@@ -26,14 +22,14 @@ export default async function OG() {
         }}
       >
         <img
-          src={new URL("../public/logo.png", import.meta.url).toString()}
+          src="/logo.png"
           alt="Precedent Logo"
           tw="w-20 h-20 mb-4 opacity-95"
         />
         <h1
           style={{
             fontSize: "100px",
-            fontFamily: "SF Pro",
+            fontFamily: "Inter, sans-serif",
             background:
               "linear-gradient(to bottom right, #000000 21.66%, #78716c 86.47%)",
             backgroundClip: "text",
@@ -49,12 +45,6 @@ export default async function OG() {
     {
       width: 1200,
       height: 630,
-      fonts: [
-        {
-          name: "SF Pro",
-          data: sfPro,
-        },
-      ],
     },
   );
 }

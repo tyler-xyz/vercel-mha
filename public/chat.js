@@ -215,10 +215,15 @@ Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {
     });
 
     // 10/27/2026: a message from either side is activity. A live chat must never time out mid-reply.
-    manager.chatClient.on("messageAdded", function () {
-      i=0;
-      localStorage.setItem("time_count", i);
-    });
+    // 11/11/2026: chatClient does not exist until a chat session starts. Attaching blindly threw
+    // and stopped the rest of this script (tab-close cleanup never registered). Wait for it.
+    (function hookMessages() {
+      if (!manager.chatClient) return setTimeout(hookMessages, 2000);
+      manager.chatClient.on("messageAdded", function () {
+        i=0;
+        localStorage.setItem("time_count", i);
+      });
+    })();
 
     // 10/27/2026: end the Flex task when the visitor leaves, so agents never open a dead chat.
     // Posts a note into the chat (if still open), then asks the server to cancel or wrap the task.
@@ -230,7 +235,8 @@ Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {
         var body = endChatBody(reason);
         if (!body) return done();
         var channelSid = JSON.parse(body).channelSid;
-        manager.chatClient.getChannelBySid(channelSid)
+        Promise.resolve()
+            .then(function () { return manager.chatClient.getChannelBySid(channelSid); })
             .then(function (channel) { return channel.sendMessage(reason); })
             .catch(function () {})
             .then(function () {

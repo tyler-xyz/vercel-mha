@@ -173,10 +173,7 @@ Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {
     // set time for session out - START
     // set time changed to 5 (4) mins from 3 (2) mins -- 04/01/2025
     //var set_min=2;
-    // 10/27/2026: 4 min cut off users waiting in queue (phones send no mousemove) and each
-    // reload started a new engagement, so agents saw duplicate chats. Raised to 10 min;
-    // touch events and incoming messages now count as activity.
-    var set_min=10;
+    var set_min=4;
     var set_time=set_min*60;
     var timeout=set_time+2;
 
@@ -192,11 +189,9 @@ Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {
        if(time_count ==set_time){
 
            localStorage.setItem("time_count", timeout);
-           endChat("Visitor's session ended due to inactivity", function () {
-               localStorage.clear();
-               alert("Your chat session has been ended due to inactivity");
-               location.reload();
-           });
+           localStorage.clear();
+           alert("Your chat session has been ended due to inactivity");
+           location.reload();
 
        }
         i++;
@@ -205,7 +200,7 @@ Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {
 
 
 
-     $('*').bind('click mousedown keypress change scroll resize dblclick mousemove touchstart touchmove', function (event ) {
+     $('*').bind('click mousedown keypress change scroll resize dblclick mousemove', function (event ) {
 
       console.log("active");
       i=0;
@@ -214,46 +209,16 @@ Twilio.FlexWebChat.createWebChat(appConfig).then(webchat => {
 
     });
 
-    // 10/27/2026: a message from either side is activity. A live chat must never time out mid-reply.
-    manager.chatClient.on("messageAdded", function () {
-      i=0;
-      localStorage.setItem("time_count", i);
-    });
-
-    // 10/27/2026: end the Flex task when the visitor leaves, so agents never open a dead chat.
-    // Posts a note into the chat (if still open), then asks the server to cancel or wrap the task.
-    function endChatBody(reason) {
-        var channelSid = manager.store.getState().flex.session.channelSid;
-        return channelSid ? JSON.stringify({ channelSid: channelSid, reason: reason }) : null;
-    }
-    function endChat(reason, done) {
-        var body = endChatBody(reason);
-        if (!body) return done();
-        var channelSid = JSON.parse(body).channelSid;
-        manager.chatClient.getChannelBySid(channelSid)
-            .then(function (channel) { return channel.sendMessage(reason); })
-            .catch(function () {})
-            .then(function () {
-                return fetch("/api/end-chat", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: body,
-                    keepalive: true
-                });
-            })
-            .catch(function () {})
-            .then(done);
-    }
 // set time for session out - END
 // 12/14/23 code for user closing browser tab - Begin
 // Utilize browser events for session closure
 window.addEventListener('beforeunload', function(event) {
-    // 10/27/2026: tell the server the visitor closed the tab. sendBeacon survives page unload.
-    // ponytail: beforeunload only (not pagehide), because iOS fires pagehide when a visitor
-    // merely switches apps and that must not end their chat. Switch if tab-close cleanup proves unreliable on iOS.
-    var body = endChatBody("Visitor closed the chat window");
-    if (body) navigator.sendBeacon("/api/end-chat", new Blob([body], { type: "application/json" }));
-
+    // Optionally, send a request to your server to mark the session as closed
+    // fetch('https://your-server/api/chat/close', {
+    //   method: 'POST',
+    //   body: JSON.stringify({ channelSid: localStorage.getItem('channelSid') }),
+    // });
+  
     // Clear local storage to remove any remaining chat session data
     localStorage.clear();
   
